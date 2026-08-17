@@ -12,9 +12,9 @@ interface AnimatedProfessionProps {
 
 export function AnimatedProfession({
   professions,
-  cycleInterval = 4000,
-  typingSpeed = 60,
-  deletingSpeed = 40,
+  cycleInterval = 3200,
+  typingSpeed = 50,
+  deletingSpeed = 30,
 }: AnimatedProfessionProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [professionIndex, setProfessionIndex] = useState(0);
@@ -49,17 +49,15 @@ export function AnimatedProfession({
   }, [displayedText, isDeleting, professionIndex, professions, cycleInterval, typingSpeed, deletingSpeed]);
 
   return (
-    <div className="flex items-center gap-3">
-      <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent">
+    <span className="inline-flex items-center">
+      <span className="text-primary font-heading font-extrabold">
         {displayedText}
       </span>
       <motion.span
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent"
-        animate={{ opacity: [1, 0] }}
-        transition={{ duration: 0.7, repeat: Infinity }}
-      >
-        |
-      </motion.span>
-    </div>
+        className="inline-block w-0.5 h-[0.9em] ml-1 bg-primary align-middle"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </span>
   );
 }
