@@ -47,11 +47,10 @@ export function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-sm shadow-black/5"
             : "bg-transparent border-b border-transparent"
-        }`}
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -72,11 +71,10 @@ export function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 ${
-                      isActive
+                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 ${isActive
                         ? "text-primary font-semibold"
                         : "text-muted hover:text-foreground"
-                    }`}
+                      }`}
                   >
                     {link.label}
                     {isActive && (
@@ -112,9 +110,8 @@ export function Header() {
         <div className="flex items-center justify-around">
           <a
             href="#about"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "about" ? "text-primary font-bold" : "text-muted"
-            }`}
+            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "about" ? "text-primary font-bold" : "text-muted"
+              }`}
           >
             <User className="w-4 h-4" />
             <span>About</span>
@@ -122,9 +119,8 @@ export function Header() {
 
           <a
             href="#projects"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "projects" ? "text-primary font-bold" : "text-muted"
-            }`}
+            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "projects" ? "text-primary font-bold" : "text-muted"
+              }`}
           >
             <FolderGit2 className="w-4 h-4" />
             <span>Projects</span>
@@ -140,9 +136,8 @@ export function Header() {
 
           <a
             href="#skills"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "skills" ? "text-primary font-bold" : "text-muted"
-            }`}
+            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "skills" ? "text-primary font-bold" : "text-muted"
+              }`}
           >
             <Wrench className="w-4 h-4" />
             <span>Skills</span>
@@ -150,12 +145,11 @@ export function Header() {
 
           <a
             href="#experience"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "experience" ? "text-primary font-bold" : "text-muted"
-            }`}
+            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "experience" ? "text-primary font-bold" : "text-muted"
+              }`}
           >
             <Briefcase className="w-4 h-4" />
-            <span>Timeline</span>
+            <span>experience</span>
           </a>
         </div>
       </nav>
