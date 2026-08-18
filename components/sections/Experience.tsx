@@ -88,7 +88,7 @@ const experiences = [
       "Built multi-tier database applications with security and transactional modeling",
       "Completed hands-on software engineering capstone projects with highest academic standing",
     ],
-    tech: ["Algorithms", "Data Structures", "Database Architecture", "OOP", "Software Modeling"],
+    tech: [],
     icon: GraduationCap,
   },
 ];
@@ -183,16 +183,18 @@ export function Experience() {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/40">
-                    {item.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-medium"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                  {item.tech && item.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/40">
+                      {item.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-medium"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </motion.div>
               );
             })}

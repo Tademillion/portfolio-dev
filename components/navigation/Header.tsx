@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { CreativeLogoTM } from "../shared/CreativeLogoTM";
 import { ThemeToggle } from "../shared/ThemeToggle";
-import { FileText, User, FolderGit2, Briefcase, Wrench, MessageSquare } from "lucide-react";
+import { Home, FileText, User, FolderGit2, Briefcase, Wrench, MessageSquare } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home", icon: User },
+  { label: "Home", href: "#home", icon: Home },
   { label: "About", href: "#about", icon: User },
   { label: "Skills", href: "#skills", icon: Wrench },
   { label: "Projects", href: "#projects", icon: FolderGit2 },
@@ -47,10 +47,11 @@ export function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-sm shadow-black/5"
             : "bg-transparent border-b border-transparent"
-          }`}
+        }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -71,10 +72,11 @@ export function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 ${isActive
+                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 ${
+                      isActive
                         ? "text-primary font-semibold"
                         : "text-muted hover:text-foreground"
-                      }`}
+                    }`}
                   >
                     {link.label}
                     {isActive && (
@@ -106,50 +108,66 @@ export function Header() {
         </nav>
       </motion.header>
 
-      <nav className="md:hidden fixed bottom-3 left-4 right-4 z-50 p-2 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/80 shadow-2xl">
+      <nav className="md:hidden fixed bottom-3 left-3 right-3 z-50 p-1.5 sm:p-2 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/80 shadow-2xl">
         <div className="flex items-center justify-around">
           <a
+            href="#home"
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "home" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
+          >
+            <Home className="w-4 h-4" />
+            <span>Home</span>
+          </a>
+
+          <a
             href="#about"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "about" ? "text-primary font-bold" : "text-muted"
-              }`}
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "about" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
           >
             <User className="w-4 h-4" />
             <span>About</span>
           </a>
 
           <a
-            href="#projects"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "projects" ? "text-primary font-bold" : "text-muted"
-              }`}
-          >
-            <FolderGit2 className="w-4 h-4" />
-            <span>Projects</span>
-          </a>
-
-          <a
-            href="#contact"
-            className="flex items-center justify-center -mt-6 w-12 h-12 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/25 border-2 border-background"
-            aria-label="Contact"
-          >
-            <MessageSquare className="w-5 h-5" />
-          </a>
-
-          <a
             href="#skills"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "skills" ? "text-primary font-bold" : "text-muted"
-              }`}
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "skills" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
           >
             <Wrench className="w-4 h-4" />
             <span>Skills</span>
           </a>
 
           <a
+            href="#projects"
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "projects" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
+          >
+            <FolderGit2 className="w-4 h-4" />
+            <span>Projects</span>
+          </a>
+
+          <a
             href="#experience"
-            className={`flex flex-col items-center gap-1 p-2 rounded-xl text-[10px] font-medium transition-colors ${activeSection === "experience" ? "text-primary font-bold" : "text-muted"
-              }`}
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "experience" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
           >
             <Briefcase className="w-4 h-4" />
-            <span>experience</span>
+            <span>Experience</span>
+          </a>
+
+          <a
+            href="#contact"
+            className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
+              activeSection === "contact" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+            }`}
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Contact</span>
           </a>
         </div>
       </nav>
