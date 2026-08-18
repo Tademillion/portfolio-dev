@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "../shared/SectionWrapper";
-import { ArrowUpRight, CheckCircle2, X, ExternalLink, Layers } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, X, Sparkles } from "lucide-react";
 
 interface Project {
   id: number;
@@ -110,49 +110,23 @@ const projects: Project[] = [
   },
 ];
 
-const categories = ["All", "Enterprise", "Full-Stack", "Backend"] as const;
-
 export function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
-
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
 
   return (
     <SectionWrapper id="projects">
       <div className="max-w-5xl mx-auto space-y-12">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-          <div className="space-y-2">
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
-              Recent <span className="font-serif italic font-normal text-primary lowercase">Projects</span>
-            </h2>
-            <p className="text-sm sm:text-base text-muted max-w-lg font-light">
-              Enterprise software systems, banking tools, and full-stack web applications.
-            </p>
+        <div className="space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Selected Works</span>
           </div>
-
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-full bg-card border border-border/80 w-fit">
-            {categories.map((cat) => {
-              const isSelected = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
-                    isSelected
-                      ? "bg-foreground text-background dark:bg-primary dark:text-primary-foreground font-semibold shadow-sm"
-                      : "text-muted hover:text-foreground"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
+            Recent <span className="font-serif italic font-normal text-primary lowercase">Projects</span>
+          </h2>
+          <p className="text-sm sm:text-base text-muted max-w-xl font-light leading-relaxed">
+            Enterprise software systems, banking tools, and full-stack web applications engineered for performance and scalability.
+          </p>
         </div>
 
         <motion.div
@@ -160,7 +134,7 @@ export function Projects() {
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 layout

@@ -34,22 +34,22 @@ export function ParticleBackground() {
     }
 
     const particles: Particle[] = [];
-    const particleCount = window.innerWidth < 768 ? 35 : 65;
-    const darkColors = ['#00d9ff', '#38bdf8', '#818cf8', '#94a3b8'];
-    const lightColors = ['#0284c7', '#0ea5e9', '#6366f1', '#64748b'];
+    const particleCount = window.innerWidth < 768 ? 20 : 35;
+    const darkColors = ['#00d9ff', '#38bdf8', '#818cf8'];
+    const lightColors = ['#0284c7', '#0ea5e9', '#6366f1'];
     const colors = isDark ? darkColors : lightColors;
 
     for (let i = 0; i < particleCount; i++) {
-      const vx = (Math.random() - 0.5) * 0.6;
-      const vy = (Math.random() - 0.5) * 0.6;
+      const vx = (Math.random() - 0.5) * 0.35;
+      const vy = (Math.random() - 0.5) * 0.35;
 
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx,
         vy,
-        radius: Math.random() * 1.6 + 0.6,
-        opacity: Math.random() * (isDark ? 0.35 : 0.25) + 0.1,
+        radius: Math.random() * 1.2 + 0.5,
+        opacity: Math.random() * (isDark ? 0.18 : 0.12) + 0.05,
         color: colors[Math.floor(Math.random() * colors.length)],
       });
     }
@@ -81,10 +81,10 @@ export function ParticleBackground() {
         const dy = mouseY - p.y;
         const distToMouse = Math.sqrt(dx * dx + dy * dy);
 
-        if (distToMouse < 120) {
-          const force = (120 - distToMouse) / 120;
-          p.x -= (dx / distToMouse) * force * 1.5;
-          p.y -= (dy / distToMouse) * force * 1.5;
+        if (distToMouse < 100) {
+          const force = (100 - distToMouse) / 100;
+          p.x -= (dx / distToMouse) * force * 1.2;
+          p.y -= (dy / distToMouse) * force * 1.2;
         }
 
         p.x += p.vx;
@@ -104,13 +104,13 @@ export function ParticleBackground() {
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-          const maxDist = 110;
+          const maxDist = 90;
 
           if (dist < maxDist) {
-            const lineOpacity = (1 - dist / maxDist) * (isDark ? 0.12 : 0.08);
+            const lineOpacity = (1 - dist / maxDist) * (isDark ? 0.08 : 0.05);
             ctx.strokeStyle = isDark ? '#00d9ff' : '#0284c7';
             ctx.globalAlpha = lineOpacity;
-            ctx.lineWidth = 0.6;
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
@@ -141,3 +141,4 @@ export function ParticleBackground() {
     />
   );
 }
+

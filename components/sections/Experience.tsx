@@ -2,27 +2,80 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../shared/SectionWrapper";
-import { Briefcase, GraduationCap, CheckCircle2, Building2, Award } from "lucide-react";
+import {
+  Briefcase,
+  GraduationCap,
+  CheckCircle2,
+  Building2,
+  ShieldCheck,
+  Server,
+  Database,
+  Workflow,
+  Sparkles,
+} from "lucide-react";
+
+const engineeringStandards = [
+  {
+    title: "Mission-Critical Stability",
+    desc: "Strict adherence to transaction integrity, ACID compliance, and zero-compromise uptime.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Enterprise Architecture",
+    desc: "High-throughput REST microservices in .NET Core and Node.js with role-based security.",
+    icon: Server,
+  },
+  {
+    title: "Data & Query Optimization",
+    desc: "Sub-second SQL Server queries, complex stored procedures, and scalable data schemas.",
+    icon: Database,
+  },
+  {
+    title: "Production Delivery",
+    desc: "Modern TypeScript workflows, containerized environments, and clean multi-tier architecture.",
+    icon: Workflow,
+  },
+];
 
 const experiences = [
   {
-    id: 1,
+    id: "amhara-bank-junior",
     type: "work",
-    title: "Junior Application Developer",
+    title: "Junior Software Developer",
     organization: "Amhara Bank SC",
     period: "2024 — Present",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Engineering, securing, and maintaining core banking and client-facing application services with strict adherence to data integrity, security standards, and high uptime.",
+      "Engineering, securing, and maintaining core banking applications and client-facing digital services with strict adherence to high security, transactional integrity, and system uptime.",
     highlights: [
-      "Engineered resilient full-stack modules and responsive web interfaces for banking workflows",
-      "Integrated secure RESTful microservices for high-volume inter-system communication",
-      "Conducted database query optimization and index tuning on Microsoft SQL Server",
+      "Engineered resilient full-stack modules and responsive web interfaces for high-volume banking workflows",
+      "Developed and integrated secure RESTful microservices in .NET Core for reliable inter-system communication",
+      "Conducted database query optimization, index tuning, and schema architecture on Microsoft SQL Server",
+      "Collaborated with cross-functional engineering teams adhering to enterprise compliance and audit protocols",
     ],
+    tech: [".NET Core", "C#", "SQL Server", "REST APIs", "DevExpress", "Banking Security"],
     icon: Building2,
   },
   {
-    id: 2,
+    id: "amhara-bank-trainee",
+    type: "work",
+    title: "IT Trainee",
+    organization: "Amhara Bank SC",
+    period: "2023 — 2024 ",
+    location: "Addis Ababa, Ethiopia",
+    description:
+      "Completed intensive 1-year rotational IT and software training across banking operations, core systems administration, database management, and enterprise software engineering workflows.",
+    highlights: [
+      "Gained hands-on experience in core banking infrastructure, network operations, and system reliability",
+      "Assisted in database management, SQL query troubleshooting, and transaction log auditing on SQL Server",
+      "Collaborated with senior software developers on internal utilities, bug fixes, and deployment verification",
+      "Mastered banking operational compliance, information security protocols, and enterprise SDLC standards",
+    ],
+    tech: ["Core Banking", "SQL Server", "IT Infrastructure", "System Operations", "Software Engineering"],
+    icon: Briefcase,
+  },
+  {
+    id: "mekdela-amba",
     type: "education",
     title: "BSc in Computer Science",
     organization: "Mekdela Amba University",
@@ -31,10 +84,11 @@ const experiences = [
     description:
       "Rigorous academic study focusing on algorithmic complexity, database architecture, distributed systems, and modern software engineering paradigms.",
     highlights: [
-      "Graduated with deep competency in full-stack architecture and object-oriented systems",
+      "Graduated with deep competency in full-stack architecture and object-oriented systems design",
       "Built multi-tier database applications with security and transactional modeling",
-      "Completed hands-on software engineering capstone projects with distinction",
+      "Completed hands-on software engineering capstone projects with highest academic standing",
     ],
+    tech: ["Algorithms", "Data Structures", "Database Architecture", "OOP", "Software Modeling"],
     icon: GraduationCap,
   },
 ];
@@ -46,36 +100,49 @@ export function Experience() {
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Professional Trajectory</span>
+              </div>
               <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
-                Work <span className="font-serif italic font-normal text-primary lowercase">Experience</span>
+                Career & <span className="font-serif italic font-normal text-primary lowercase">Experience</span>
               </h2>
               <p className="text-sm sm:text-base text-muted font-light leading-relaxed">
-                Professional trajectory building reliable banking applications alongside comprehensive computer science foundations.
+                Proven track record in enterprise banking software engineering backed by strong computer science fundamentals.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3.5 pt-2">
-              <div className="p-5 rounded-2xl border border-border/80 bg-card shadow-sm space-y-1">
-                <p className="text-3xl font-extrabold font-serif italic text-primary">2+</p>
-                <p className="text-xs text-foreground font-semibold">Years Experience</p>
-                <p className="text-[11px] text-muted font-light">Enterprise Banking IT</p>
-              </div>
-
-              <div className="p-5 rounded-2xl border border-border/80 bg-card shadow-sm space-y-1">
-                <p className="text-3xl font-extrabold font-serif italic text-foreground">6+</p>
-                <p className="text-xs text-foreground font-semibold">Completed Systems</p>
-                <p className="text-[11px] text-muted font-light">Full-Stack & Backend Services</p>
-              </div>
-
-              <div className="p-5 rounded-2xl border border-border/80 bg-card shadow-sm space-y-1">
-                <p className="text-3xl font-extrabold font-serif italic text-primary">BSc</p>
-                <p className="text-xs text-foreground font-semibold">Computer Science</p>
-                <p className="text-[11px] text-muted font-light">Mekdela Amba University</p>
+            <div className="space-y-3 pt-2">
+              <p className="text-xs uppercase font-semibold tracking-wider text-muted">
+                Enterprise Engineering Standards
+              </p>
+              <div className="grid gap-3">
+                {engineeringStandards.map((std, idx) => {
+                  const Icon = std.icon;
+                  return (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm shadow-sm flex items-start gap-3.5 hover:border-primary/40 hover:bg-card transition-all"
+                    >
+                      <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <h4 className="font-bold text-xs sm:text-sm text-foreground">
+                          {std.title}
+                        </h4>
+                        <p className="text-xs text-muted leading-relaxed font-light">
+                          {std.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-7 space-y-6">
             {experiences.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -115,6 +182,17 @@ export function Experience() {
                       </div>
                     ))}
                   </div>
+
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/40">
+                    {item.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-medium"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </motion.div>
               );
             })}
@@ -124,3 +202,4 @@ export function Experience() {
     </SectionWrapper>
   );
 }
+

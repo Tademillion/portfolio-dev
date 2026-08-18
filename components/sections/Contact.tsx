@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { SectionWrapper } from "../shared/SectionWrapper";
-import { Mail, MapPin, Send, CheckCircle2, Linkedin, Github, Copy, Check } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, Linkedin, Github, Copy, Check, Sparkles } from "lucide-react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export function Contact() {
@@ -57,8 +57,12 @@ export function Contact() {
     <SectionWrapper id="contact">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-            Get in <span className="font-serif italic font-normal text-primary">Touch</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Connect & Collaborate</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
+            Get in <span className="font-serif italic font-normal text-primary lowercase">Touch</span>
           </h2>
           <p className="text-sm sm:text-base text-muted max-w-lg font-light">
             Have a project in mind or interested in collaboration? Feel free to reach out.

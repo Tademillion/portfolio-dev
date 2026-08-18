@@ -1,5 +1,6 @@
 "use client";
 
+import { OpeningTransition } from "@/components/shared/OpeningTransition";
 import { Header } from "@/components/navigation/Header";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -13,6 +14,7 @@ import { Contact } from "@/components/sections/Contact";
 export default function Page() {
   return (
     <main className="bg-transparent text-foreground">
+      <OpeningTransition />
       <ParticleBackground />
       <Header />
       <Hero />
@@ -25,3 +27,4 @@ export default function Page() {
     </main>
   );
 }
+

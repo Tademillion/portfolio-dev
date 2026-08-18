@@ -13,7 +13,6 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiMongodb,
-  SiPostgresql,
   SiMysql,
   SiDocker,
   SiGit,
@@ -24,13 +23,13 @@ import {
 import {
   Code2,
   Database,
-  Layers,
   Server,
   ShieldCheck,
   Lock,
   Network,
   KeyRound,
   Workflow,
+  Sparkles,
 } from "lucide-react";
 import { IconType } from "react-icons";
 
@@ -55,9 +54,7 @@ const allSkills: SkillItem[] = [
 
   // Databases
   { name: "Microsoft SQL Server", category: "databases", tag: "RDBMS", icon: Database, color: "#CC292B" },
-  { name: "T-SQL Stored Procedures", category: "databases", tag: "Query Logic", icon: Layers, color: "#0078D4" },
   { name: "MongoDB", category: "databases", tag: "Document Store", icon: SiMongodb, color: "#47A248" },
-  { name: "PostgreSQL", category: "databases", tag: "Object-Relational", icon: SiPostgresql, color: "#4169E1" },
   { name: "MySQL", category: "databases", tag: "Relational DB", icon: SiMysql, color: "#4479A1" },
 
   // DevOps & Tools
@@ -95,6 +92,10 @@ export function Skills() {
     <SectionWrapper id="skills">
       <div className="max-w-5xl mx-auto space-y-12">
         <div className="text-center space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Tech Stack & Tools</span>
+          </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
             Technical <span className="font-serif italic font-normal text-primary lowercase">Skills</span>
           </h2>

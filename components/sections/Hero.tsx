@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Mail, FileText, ArrowRight, Github, Linkedin } from "lucide-react";
+import { Mail, FileText, Github, Linkedin, ShieldCheck, Layers, Database, Sparkles } from "lucide-react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export function Hero() {
@@ -41,9 +41,9 @@ export function Hero() {
       >
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-14">
           <div className="space-y-5 text-center md:text-left flex-1">
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Junior Application Developer // Amhara Bank SC</span>
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Junior Software Developer · Amhara Bank SC</span>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-2">
@@ -62,7 +62,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-sm sm:text-base text-muted leading-relaxed font-light max-w-xl"
             >
-              Versatile Full-Stack Software Developer with 2+ years of enterprise experience building secure banking applications, high-performance .NET backends, and modern Next.js web applications.
+              Versatile Full-Stack Software Developer engineering secure banking applications, high-performance .NET backend microservices, and modern Next.js web applications with zero-compromise reliability.
             </motion.p>
 
             <motion.div
@@ -136,41 +136,56 @@ export function Hero() {
             variants={itemVariants}
             className="relative shrink-0 flex items-center justify-center"
           >
-            <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-primary/80 shadow-2xl shadow-primary/20 bg-card">
-              <Image
-                src="/img/developer.png"
-                alt="Tadde Million"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </div>
-            <div className="absolute -bottom-2 -right-2 p-2.5 rounded-full bg-card border border-border/80 shadow-lg text-primary">
-              <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 block animate-pulse" />
+            <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-3xl overflow-hidden border-2 border-primary/40 shadow-2xl shadow-primary/15 bg-card/80 backdrop-blur-sm p-1.5 ring-1 ring-primary/20">
+              <div className="relative w-full h-full rounded-[20px] overflow-hidden">
+                <Image
+                  src="/img/developer.png"
+                  alt="Tadde Million"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
             </div>
           </motion.div>
         </div>
 
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-3 gap-6 pt-8 border-t border-border/60 text-center max-w-2xl mx-auto"
+          className="grid sm:grid-cols-3 gap-4 pt-6 border-t border-border/60"
         >
-          <div className="space-y-1">
-            <p className="text-3xl sm:text-4xl font-extrabold font-serif italic text-primary">2+</p>
-            <p className="text-xs text-muted font-medium">Years in Banking IT</p>
+          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Enterprise Banking Core</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Transactional integrity & mission-critical security.</p>
+            </div>
           </div>
 
-          <div className="space-y-1">
-            <p className="text-3xl sm:text-4xl font-extrabold font-serif italic text-foreground">6+</p>
-            <p className="text-xs text-muted font-medium">Deployed Systems</p>
+          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
+              <Layers className="w-4 h-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Modern Full-Stack Web</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">High-performance Next.js, React & TypeScript toolchains.</p>
+            </div>
           </div>
 
-          <div className="space-y-1">
-            <p className="text-3xl sm:text-4xl font-extrabold font-serif italic text-primary">BSc</p>
-            <p className="text-xs text-muted font-medium">Computer Science</p>
+          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
+              <Database className="w-4 h-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Scalable APIs & SQL Server</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Optimized .NET microservices & relational data models.</p>
+            </div>
           </div>
         </motion.div>
       </motion.div>
     </section>
   );
 }
+
