@@ -4,20 +4,27 @@ import { motion } from "framer-motion";
 
 export function CreativeLogoTM() {
   return (
-    <div className="flex items-center gap-2.5">
+    <div className="flex items-center gap-2.5 group cursor-pointer">
       <motion.div
-        className="relative w-9 h-9 rounded-full bg-card border border-border/80 flex items-center justify-center shadow-sm overflow-hidden group cursor-pointer"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-card border border-border/80 group-hover:border-primary/50 flex items-center justify-center shadow-sm shadow-black/5 dark:shadow-primary/10 overflow-hidden transition-all duration-300"
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.94 }}
       >
-        <span className="font-serif italic font-bold text-sm text-foreground group-hover:text-primary transition-colors">
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <span className="font-serif italic font-bold text-base sm:text-lg text-foreground group-hover:text-primary transition-colors tracking-tight select-none">
           TM
         </span>
       </motion.div>
 
-      <span className="font-medium text-sm tracking-tight text-foreground hidden sm:inline-block">
-        Tadde <span className="font-serif italic font-normal text-primary">Million</span>
-      </span>
+      <div className="flex flex-col leading-tight">
+        <span className="font-semibold text-sm tracking-tight text-foreground group-hover:text-primary transition-colors">
+          Tadde <span className="font-serif italic font-normal text-primary">Million</span>
+        </span>
+        <span className="text-[10px] text-muted tracking-wider uppercase font-medium">
+          Software Dev
+        </span>
+      </div>
     </div>
   );
 }
+
