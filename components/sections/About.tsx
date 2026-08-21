@@ -2,28 +2,61 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../shared/SectionWrapper";
-import { Briefcase, GraduationCap, Code2, Database, Shield, Zap, Sparkles } from "lucide-react";
+import {
+  Briefcase,
+  GraduationCap,
+  Code2,
+  Database,
+  Shield,
+  Zap,
+  Sparkles,
+  Network,
+  Container,
+  Activity,
+  CheckCircle2,
+  SearchCode,
+  FileCheck,
+} from "lucide-react";
 
 const disciplines = [
   {
-    title: "Full-Stack Development",
-    desc: "Crafting end-to-end web applications with Next.js, React, and modern TypeScript toolchains.",
+    title: "B2B Integrations & Payment Gateways",
+    desc: "Architecting and securing inter-institutional financial communication pipelines (ESL, Ethiopian Airlines, NBE, SantimPay, ) with WSO2 API Manager & Micro Integrator.",
+    icon: Network,
+  },
+  {
+    title: "System Monitoring & Problem Management",
+    desc: "Conducting continuous application monitoring, architecture reviews, optimization, incident handling, and detailed Root Cause Analysis (RCA) to maintain high availability.",
+    icon: Activity,
+  },
+  {
+    title: "DevOps & Containerization",
+    desc: "Implementing Docker containerization on Linux OS, streamlining deployment processes, and collaborating with cross-functional technical teams for rapid issue resolution.",
+    icon: Container,
+  },
+  {
+    title: "Full-Stack Software Engineering",
+    desc: "Engineering resilient web applications and microservices in .NET Core, Next.js, and TypeScript with clean database modeling on SQL Server and strong attention to detail.",
     icon: Code2,
   },
+];
+
+const operationalPillars = [
   {
-    title: "Enterprise Backend Systems",
-    desc: "Designing reliable RESTful APIs, business logic layers, and microservices in .NET Core and Node.js.",
-    icon: Shield,
+    title: "Monitoring, Incident Handling & RCA",
+    desc: "Performing proactive 24/7 system and application telemetry monitoring, architecture reviews, performance tuning, and thorough root cause analysis for complete problem management.",
   },
   {
-    title: "Database Engineering",
-    desc: "Structuring relational databases and document stores with Microsoft SQL Server and MongoDB.",
-    icon: Database,
+    title: "Product Design, Testing &  Roadmap",
+    desc: "Participating actively in the end-to-end design, rigorous testing, and deployment of new products, core upgrades, and  / payment system roadmap milestones.",
   },
   {
-    title: "Performance & Reliability",
-    desc: "Optimizing queries, load times, and state management for zero-compromise production stability.",
-    icon: Zap,
+    title: "DevOps Processes & Technical Collaboration",
+    desc: "Deploying containerized microservices via Docker across Linux production hosts while collaborating closely with internal and external partner teams for rapid incident resolution.",
+  },
+  {
+    title: "Knowledge Base & Service Improvement",
+    desc: "Maintaining comprehensive technical knowledge bases, compiling accurate system performance reports, and driving continuous service improvements aligned with strict availability SLAs.",
   },
 ];
 
@@ -39,8 +72,8 @@ export function About() {
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
             About <span className="font-serif italic font-normal text-primary lowercase">Me</span>
           </h2>
-          <p className="text-sm sm:text-base text-muted max-w-lg font-light">
-            A software developer dedicated to building reliable, high-performance digital solutions.
+          <p className="text-sm sm:text-base text-muted max-w-xl font-light">
+            A detail-oriented software developer and enterprise integration engineer dedicated to solving complex problems, ensuring high availability, and delivering mission-critical financial systems.
           </p>
         </div>
 
@@ -48,15 +81,16 @@ export function About() {
           <div className="lg:col-span-6 space-y-6">
             <div className="p-7 sm:p-8 rounded-3xl border border-border/80 bg-card shadow-sm space-y-4 text-muted leading-relaxed font-light text-base">
               <p className="text-foreground font-medium text-lg">
-                I am a Full-Stack Software Developer based in Addis Ababa, Ethiopia, with over 2 years of hands-on experience spanning enterprise banking systems and modern full-stack development.
+                I am a Full-Stack Software Developer & Enterprise Systems Engineer based in Addis Ababa, Ethiopia, with over 2 years of hands-on experience in enterprise banking systems, B2B financial integrations, and scalable full-stack applications.
               </p>
               <p>
-                Currently serving as a <span className="text-foreground font-medium">Junior Software Developer at Amhara Bank SC</span> (following a first year as an <span className="text-foreground font-medium">IT Trainee</span>), I engineer and maintain mission-critical applications that demand high security, transactional integrity, and seamless performance.
+                Currently serving as a <span className="text-foreground font-medium">Junior Software Developer at Amhara Bank SC</span> (following a foundational year as an <span className="text-foreground font-medium">IT Trainee</span>), I approach software engineering with <span className="text-foreground font-medium">meticulous attention to detail</span> and an analytical mindset focused on understanding and resolving deep technical bottlenecks.
               </p>
               <p>
-                I hold a <span className="text-foreground font-medium">BSc in Computer Science from Mekdela Amba University</span> (July 2023). My work bridges solid computer science fundamentals with modern developer workflows across .NET Core, Next.js, TypeScript, SQL Server, and cloud ecosystems.
+                My expertise spans designing, testing, and deploying mission-critical services (including <span className="text-foreground font-medium"> roadmap delivery</span>, <span className="text-foreground font-medium">ESL</span>, <span className="text-foreground font-medium">Ethiopian Airlines</span>, <span className="text-foreground font-medium">NBE</span>, and <span className="text-foreground font-medium">SantimPay</span>), executing architecture reviews, incident management, detailed root cause analysis (RCA), and containerized microservice deployments across <span className="text-foreground font-medium">Linux OS</span> and <span className="text-foreground font-medium">Docker</span>.
               </p>
             </div>
+
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl border border-border/80 bg-card shadow-sm space-y-2">
@@ -105,7 +139,40 @@ export function About() {
             })}
           </div>
         </div>
+
+        {/* Operational & Engineering Standards Callout */}
+        <div className="p-6 sm:p-8 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card to-card space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/60 pb-4">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                Operational Excellence & Reliability Standards
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                How I Solve Problems & Maintain High-Availability Systems
+              </h3>
+            </div>
+            <span className="text-[11px] px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-medium self-start sm:self-auto">
+              SLA & Target Driven
+            </span>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+            {operationalPillars.map((pillar, idx) => (
+              <div key={idx} className="space-y-1.5 p-4 rounded-2xl bg-card border border-border/70">
+                <div className="flex items-center gap-2 text-foreground font-bold text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                  <span>{pillar.title}</span>
+                </div>
+                <p className="text-xs text-muted leading-relaxed font-light pl-6">
+                  {pillar.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );
 }
+
+

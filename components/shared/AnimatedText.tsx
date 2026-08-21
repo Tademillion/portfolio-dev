@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 interface AnimatedTextProps {
   text: string;
@@ -17,7 +17,7 @@ export function AnimatedText({
 }: AnimatedTextProps) {
   const letters = text.split('');
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -28,7 +28,7 @@ export function AnimatedText({
     },
   };
 
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 10,
@@ -37,7 +37,7 @@ export function AnimatedText({
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         damping: 12,
         stiffness: 100,
       },

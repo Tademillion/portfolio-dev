@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Mail, FileText, Github, Linkedin, ShieldCheck, Layers, Database, Sparkles } from "lucide-react";
+import { Mail, FileText, Github, Linkedin, ShieldCheck, Database, Sparkles, Terminal, Network, Container } from "lucide-react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export function Hero() {
@@ -54,7 +54,7 @@ export function Hero() {
                 Tadde <span className="font-serif italic font-normal text-primary lowercase">Million</span>
               </h1>
               <h2 className="text-lg sm:text-xl font-bold tracking-tight text-foreground/90 uppercase">
-                Full-Stack Developer & <span className="font-serif italic font-normal text-primary lowercase">Banking Systems Engineer</span>
+                Full-Stack Developer & <span className="font-serif italic font-normal text-primary lowercase">Enterprise Systems Engineer</span>
               </h2>
             </motion.div>
 
@@ -62,7 +62,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-sm sm:text-base text-muted leading-relaxed font-light max-w-xl"
             >
-              Versatile Full-Stack Software Developer engineering secure banking applications, high-performance .NET backend microservices, and modern Next.js web applications with zero-compromise reliability.
+              Full-Stack Developer & Enterprise Systems Engineer specializing in B2B financial integrations with <strong className="font-medium text-foreground">WSO2 API Manager & Micro Integrator</strong>, <strong className="font-medium text-foreground">Linux OS</strong>, and <strong className="font-medium text-foreground">Docker</strong>. Driven by meticulous attention to detail, proactive root cause analysis (RCA), system monitoring, and high-availability payment roadmap delivery.
             </motion.p>
 
             <motion.div
@@ -156,21 +156,21 @@ export function Hero() {
         >
           <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
             <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <ShieldCheck className="w-4 h-4" />
+              <Network className="w-4 h-4" />
             </div>
             <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Enterprise Banking Core</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Transactional integrity & mission-critical security.</p>
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">WSO2 API & B2B Integrations</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Secure financial gateways (ESL, Airlines, NBE, SantimPay & ).</p>
             </div>
           </div>
 
           <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
             <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <Layers className="w-4 h-4" />
+              <Container className="w-4 h-4" />
             </div>
             <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Modern Full-Stack Web</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">High-performance Next.js, React & TypeScript toolchains.</p>
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">DevOps & Problem Resolution</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Docker on Linux OS, cross-team collaboration & incident RCA.</p>
             </div>
           </div>
 
@@ -179,8 +179,8 @@ export function Hero() {
               <Database className="w-4 h-4" />
             </div>
             <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Scalable APIs & SQL Server</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Optimized .NET microservices & relational data models.</p>
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Full-Stack & System Reliability</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Architecture reviews, monitoring, performance tuning & SLA targets.</p>
             </div>
           </div>
         </motion.div>

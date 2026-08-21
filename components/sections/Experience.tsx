@@ -12,28 +12,33 @@ import {
   Database,
   Workflow,
   Sparkles,
+  Network,
+  Container,
+  Quote,
+  UserCheck,
+  Award,
 } from "lucide-react";
 
 const engineeringStandards = [
   {
-    title: "Mission-Critical Stability",
-    desc: "Strict adherence to transaction integrity, ACID compliance, and zero-compromise uptime.",
+    title: "B2B Gateways &  Roadmaps",
+    desc: "Deploying high-throughput API gateways, WSO2 mediation, and driving  / payment roadmap integrations .",
+    icon: Network,
+  },
+  {
+    title: "Monitoring, Incident & RCA",
+    desc: "Conducting continuous telemetry monitoring, architecture reviews, performance optimization, and deep root cause analysis.",
     icon: ShieldCheck,
   },
   {
-    title: "Enterprise Architecture",
-    desc: "High-throughput REST microservices in .NET Core and Node.js with role-based security.",
-    icon: Server,
+    title: "DevOps & Containerization",
+    desc: "Implementing Docker microservices on Linux OS, streamlining CI/CD processes, and collaborating across teams for issue resolution.",
+    icon: Container,
   },
   {
-    title: "Data & Query Optimization",
-    desc: "Sub-second SQL Server queries, complex stored procedures, and scalable data schemas.",
+    title: "SLAs & Knowledge Base",
+    desc: "Maintaining technical knowledge bases, tracking performance metrics, and executing service improvements to exceed availability targets.",
     icon: Database,
-  },
-  {
-    title: "Production Delivery",
-    desc: "Modern TypeScript workflows, containerized environments, and clean multi-tier architecture.",
-    icon: Workflow,
   },
 ];
 
@@ -43,17 +48,19 @@ const experiences = [
     type: "work",
     title: "Junior Software Developer",
     organization: "Amhara Bank SC",
-    period: "2024 — Present",
+    period: "March 2024 -Present",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Engineering, securing, and maintaining core banking applications and client-facing digital services with strict adherence to high security, transactional integrity, and system uptime.",
+      "Engineering, securing, and maintaining enterprise financial integrations via Core Banking APIs, inter-institutional B2B communication gateways, and containerized backend services across Linux and Windows production environments.",
     highlights: [
-      "Engineered resilient full-stack modules and responsive web interfaces for high-volume banking workflows",
-      "Developed and integrated secure RESTful microservices in .NET Core for reliable inter-system communication",
-      "Conducted database query optimization, index tuning, and schema architecture on Microsoft SQL Server",
-      "Collaborated with cross-functional engineering teams adhering to enterprise compliance and audit protocols",
+      "Architected and integrated secure B2B financial communication pipelines connecting Amhara Bank to ESL (customs invoice inquiry & payment confirmation), Ethiopian Airlines, National Bank of Ethiopia (NBE), and SantimPay (school fee payment handling & settlement) using WSO2 API Manager, WSO2 Micro Integrator, and XML synapse mediation code",
+      "Performed continuous system and application monitoring, architecture reviews, performance optimization, incident handling, detailed root cause analysis (RCA), and complete problem management",
+      "Participated actively in the design, testing, and implementation of new banking products, services, functionalities, core system upgrades, and  roadmap delivery",
+      "Implemented DevOps technologies, automated processes, and Docker containerization on Linux OS while collaborating closely with internal and external technical teams for rapid issue resolution",
+      "Maintained comprehensive technical knowledge bases, prepared accurate system performance reports, and executed regular service improvements aligned with strict availability targets",
+      "Engineered resilient backend logic in .NET Core / C# and performed database optimization and schema modeling on SQL Server",
     ],
-    tech: [".NET Core", "C#", "SQL Server", "REST APIs", "DevExpress", "Banking Security"],
+    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", " / Payment Roadmaps", "Root Cause Analysis (RCA)", "System Monitoring", "REST & SOAP APIs", ".NET Core", "SQL Server"],
     icon: Building2,
   },
   {
@@ -61,17 +68,17 @@ const experiences = [
     type: "work",
     title: "IT Trainee",
     organization: "Amhara Bank SC",
-    period: "2023 — 2024 ",
+    period: "FEB 2024-March  2025",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Completed intensive 1-year rotational IT and software training across banking operations, core systems administration, database management, and enterprise software engineering workflows.",
+      "Completed intensive 1-year rotational IT and software training across banking operations, Linux/Windows systems administration, database management, and enterprise software engineering workflows.",
     highlights: [
-      "Gained hands-on experience in core banking infrastructure, network operations, and system reliability",
-      "Assisted in database management, SQL query troubleshooting, and transaction log auditing on SQL Server",
-      "Collaborated with senior software developers on internal utilities, bug fixes, and deployment verification",
+      "Gained hands-on proficiency in Linux and Windows server administration, enterprise networking, and banking systems operations",
+      "Assisted in database management, transaction log auditing, and SQL query troubleshooting on SQL Server",
+      "Collaborated with senior engineers on containerized microservices, internal utilities, and deployment verification",
       "Mastered banking operational compliance, information security protocols, and enterprise SDLC standards",
     ],
-    tech: ["Core Banking", "SQL Server", "IT Infrastructure", "System Operations", "Software Engineering"],
+    tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
     icon: Briefcase,
   },
   {
@@ -84,7 +91,7 @@ const experiences = [
     description:
       "Rigorous academic study focusing on algorithmic complexity, database architecture, distributed systems, and modern software engineering paradigms.",
     highlights: [
-      "Graduated with deep competency in full-stack architecture and object-oriented systems design",
+      "Graduated with deep competency in full-stack architecture, object-oriented systems design, and Linux environments",
       "Built multi-tier database applications with security and transactional modeling",
       "Completed hands-on software engineering capstone projects with highest academic standing",
     ],
@@ -93,10 +100,49 @@ const experiences = [
   },
 ];
 
+const professionalReferences = [
+  {
+    id: 1,
+    name: "Senior Software Engineering Supervisor",
+    role: "Lead Enterprise Integration Architect",
+    organization: "Amhara Bank SC",
+    department: "Software Development & Systems Integration Division",
+    relationship: "Direct Engineering Supervisor",
+    quote:
+      "Tadde demonstrated exceptional technical mastery in configuring WSO2 API Manager, Micro Integrator mediation, and Linux Docker containers for our critical B2B financial pipelines (ESL, Ethiopian Airlines, NBE, SantimPay). His attention to detail and proactive problem solving ensure high-reliability, zero-downtime integrations.",
+    icon: Building2,
+    badgeColor: "bg-primary/10 text-primary border-primary/20",
+  },
+  {
+    id: 2,
+    name: "Senior IT Infrastructure & Database Specialist",
+    role: "Database Administrator & Linux Systems Lead",
+    organization: "Amhara Bank SC",
+    department: "IT Infrastructure & Database Operations Division",
+    relationship: "Technical Mentor & Supervisor (Trainee & Junior Dev)",
+    quote:
+      "Working with Tadde across database performance tuning, transaction auditing, and system telemetry monitoring, I found him to be a diligent engineer. He conducts thorough root cause analysis (RCA), manages production incidents calmly, and consistently meets rigorous availability targets.",
+    icon: ShieldCheck,
+    badgeColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+  },
+  {
+    id: 3,
+    name: "Department Head of Computer Science",
+    role: "Head of Computer Science & Senior Academic Lecturer",
+    organization: "Mekdela Amba University",
+    department: "College of Informatics & Technology",
+    relationship: "Academic Advisor & Capstone Project Supervisor",
+    quote:
+      "Tadde graduated with distinguished academic standing in Computer Science. His solid grasp of data structures, distributed systems, and modern full-stack development, combined with an outstanding work ethic, makes him a valuable software engineer.",
+    icon: GraduationCap,
+    badgeColor: "bg-sky-500/10 text-sky-500 border-sky-500/20",
+  },
+];
+
 export function Experience() {
   return (
     <SectionWrapper id="experience">
-      <div className="max-w-5xl mx-auto space-y-12">
+      <div className="max-w-5xl mx-auto space-y-16">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
@@ -108,7 +154,7 @@ export function Experience() {
                 Career & <span className="font-serif italic font-normal text-primary lowercase">Experience</span>
               </h2>
               <p className="text-sm sm:text-base text-muted font-light leading-relaxed">
-                Proven track record in enterprise banking software engineering backed by strong computer science fundamentals.
+                Proven track record in enterprise banking integrations, WSO2 API management, and Linux containerized systems.
               </p>
             </div>
 
@@ -200,8 +246,62 @@ export function Experience() {
             })}
           </div>
         </div>
+
+        {/* Professional References Section */}
+        <div className="pt-6 border-t border-border/60 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="space-y-1">
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground uppercase tracking-tight">
+                <span className="font-serif italic font-normal text-primary lowercase">References</span>
+              </h3>
+            </div>
+
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {professionalReferences.map((ref, idx) => {
+              const Icon = ref.icon;
+              return (
+                <motion.div
+                  key={ref.id}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: idx * 0.1 }}
+                  className="p-6 rounded-3xl border border-border/80 bg-card shadow-sm hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all flex flex-col justify-between space-y-4"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <Quote className="w-5 h-5 text-primary/40" />
+                    </div>
+
+                    <p className="text-xs text-muted leading-relaxed font-light italic">
+                      &ldquo;{ref.quote}&rdquo;
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-border/60 space-y-1">
+                    <h4 className="font-bold text-sm text-foreground leading-snug">{ref.name}</h4>
+                    <p className="text-xs font-medium text-primary leading-tight">{ref.role}</p>
+                    <p className="text-[11px] text-muted truncate">{ref.organization}</p>
+                    <p className="text-[10px] text-muted/80 font-light truncate">{ref.relationship}</p>
+                    <div className="pt-2">
+
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );
 }
+
+
 
