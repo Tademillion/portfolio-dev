@@ -97,7 +97,7 @@ export function SantimPayLogo({ className = "w-8 h-8" }: { className?: string })
 interface Project {
   id: number;
   title: string;
-  category: "Enterprise & Integrations" | "Web & Full-Stack";
+  category: "Fintech & B2B Integrations" | "Enterprise ERP & Full-Stack";
   tagline: string;
   overview: string;
   highlights: string[];
@@ -112,7 +112,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Amhara Bank ⇄ Ethiopian Airlines Integration",
-    category: "Enterprise & Integrations",
+    category: "Fintech & B2B Integrations",
     tagline: "Ticketing Revenue Settlement & Corporate Banking Gateway",
     overview:
       "Mission-critical bidirectional B2B financial integration connecting Amhara Bank's financial APIs with Ethiopian Airlines. Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code, containerized in Docker on Linux OS, the platform enables real-time ticket purchase authorizations, corporate account automated settlements, and automated booking payment reconciliations via REST and SOAP APIs.",
@@ -131,7 +131,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Amhara Bank ⇄ ESL Logistics Payment System Integration",
-    category: "Enterprise & Integrations",
+    category: "Fintech & B2B Integrations",
     tagline: "Customer Invoice Inquiry, Validation & Real-Time Payment Confirmation Gateway",
     overview:
       "Technical integration with the ESL (Ethiopian Shipping and Logistics) Payment System APIs for authorized banks and Payment Service Providers (PSPs). Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the platform provides secure, standardized REST-based interfaces supporting customer invoice inquiry, real-time bill validation, and instant payment confirmation to ensure reliable and secure freight clearance processing.",
@@ -150,7 +150,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Amhara Bank ⇄ NBE Regulatory Integration",
-    category: "Enterprise & Integrations",
+    category: "Fintech & B2B Integrations",
     tagline: "Mandatory Central Bank Regulatory Reporting & RTGS Clearing Feed",
     overview:
       "Secure institutional financial pipeline connecting Amhara Bank directly to the National Bank of Ethiopia (NBE). Engineered using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the system automates mandatory regulatory monetary compliance reporting, Real-Time Gross Settlement (RTGS) inter-bank transaction reporting, and central reserve auditing data streams.",
@@ -169,7 +169,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Amhara Bank ⇄ SantimPay School Fee Payment Integration",
-    category: "Enterprise & Integrations",
+    category: "Fintech & B2B Integrations",
     tagline: "Digital School Fee Collection, Student Bill Inquiry & Tuition Settlement Gateway",
     overview:
       "Bidirectional fintech payment gateway integration connecting Amhara Bank's financial APIs with SantimPay for digital school payment handling. Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the platform enables real-time student tuition fee inquiry, automated bill validation, instant digital tuition payment confirmation, and automated ledger settlement to educational institutions' bank accounts.",
@@ -187,44 +187,44 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Enterprise HR Management System",
-    category: "Web & Full-Stack",
-    tagline: "Workforce Logistics & Automated Payroll Architecture",
+    title: "Enterprise HR & Leave Management system Platform",
+    category: "Enterprise ERP & Full-Stack",
+    tagline: "Workforce Logistics, Multi-Department Hierarchies & Automated leave manageemnt system",
     overview:
-      "Enterprise human resource management platform built for institutional employee lifecycle tracking, organizational hierarchies, and automated payroll operations with strict audit logging.",
+      "Enterprise human resource management platform built for institutional employee lifecycle tracking, organizational hierarchies, and automated leave manageemnt system.",
     highlights: [
-      "Role-based permissions matrix for departmental isolation",
-      "Automated attendance, leave tracking, and payroll reconciliation",
-      "High-throughput reporting queries optimized for sub-second execution",
+      "Role-based permissions matrix for departmental isolation and multi-tier access control",
+      "Automated attendance, leave tracking, and payroll reconciliation algorithms",
+      "High-throughput reporting queries optimized for sub-second execution on SQL Server",
     ],
-    tech: [".NET", "C#", "SQL Server", "DevExpress", "IIS"],
-    image: "/projects/hr-management.jpg",
+    tech: [".NET Core", "C#", "SQL Server", "DevExpress", "IIS"],
+    image: "/img/hr-management.png",
   },
   {
     id: 6,
-    title: "Stock & Warehouse Inventory System",
-    category: "Web & Full-Stack",
-    tagline: "Multi-Warehouse Inventory Tracking & Reorder Automation",
+    title: "Stock & Warehouse Inventory ERP",
+    category: "Enterprise ERP & Full-Stack",
+    tagline: "Multi-Warehouse Inventory Tracking, FIFO Valuation & Automated Reorder",
     overview:
       "High-precision inventory system providing real-time stock balances, dynamic minimum-threshold warnings, multi-warehouse transfers, and vendor purchase requisition workflows.",
     highlights: [
       "Real-time stock balance tracking with automated FIFO inventory valuation",
-      "Automated threshold alarms and vendor procurement dispatch",
-      "Immutable transaction auditing for compliance and internal audits",
+      "Automated threshold alarms and vendor procurement dispatch workflows",
+      "Immutable transaction auditing for enterprise compliance and internal audits",
     ],
-    tech: [".NET", "SQL Server", "DevExpress", "Windows Server"],
-    image: "/projects/inventory-system.jpg",
+    tech: [".NET Core", "SQL Server", "DevExpress", "Windows Server"],
+    image: "/img/stock-management.png",
   },
   {
     id: 7,
-    title: "Fiscal Budget & Planning Platform",
-    category: "Web & Full-Stack",
-    tagline: "Organizational Forecasting & Multi-Tier Approvals",
+    title: "Fiscal Budget & Planning ERP Platform",
+    category: "Enterprise ERP & Full-Stack",
+    tagline: "Organizational Forecasting, Expense Authorizations & Multi-Tier Approvals",
     overview:
       "Modern financial planning platform facilitating organizational budget distribution, dynamic expense authorization workflows, and multi-tier analytics.",
     highlights: [
-      "Interactive multi-tier approval chains with real-time budget burn rate",
-      "Type-safe REST API bridge between Next.js and .NET Core",
+      "Interactive multi-tier approval chains with real-time budget burn rate tracking",
+      "Type-safe REST API bridge between Next.js frontend and .NET Core microservices",
       "Custom analytics dashboard with instant exportable financial reports",
     ],
     tech: ["Next.js", ".NET Core", "TypeScript", "Tailwind CSS", "SQL Server"],
@@ -233,14 +233,14 @@ const projects: Project[] = [
   {
     id: 8,
     title: "Cryptographic Letter Verification System",
-    category: "Web & Full-Stack",
-    tagline: "Tamper-Proof Document Authentication Platform",
+    category: "Enterprise ERP & Full-Stack",
+    tagline: "Tamper-Proof Document Authentication & Real-Time QR Verification",
     overview:
       "High-security document verification platform that eliminates counterfeit official correspondence through cryptographic payload hashing and instant public QR validation.",
     highlights: [
-      "Tamper-evident document hashing and instant verification via QR codes",
-      "Scalable RESTful microservice handling concurrent document lookups",
-      "Complete immutable audit trail of verification scans and attempts",
+      "Tamper-evident document hashing and instant verification via public QR codes",
+      "Scalable RESTful microservice handling concurrent document lookups with caching",
+      "Complete immutable audit trail of verification scans and authorization attempts",
     ],
     tech: ["Next.js", "Node.js", "Express", "MongoDB", "TypeScript"],
     image: "/projects/letter-verification.jpg",
@@ -248,12 +248,12 @@ const projects: Project[] = [
   {
     id: 9,
     title: "Judicial Court Fee Management System",
-    category: "Web & Full-Stack",
-    tagline: "Regional Court Fee Processing & Case Accounting",
+    category: "Enterprise ERP & Full-Stack",
+    tagline: "Regional Court Case Accounting, Fee Computation & Electronic Receipting",
     overview:
       "Centralized fee collection and reconciliation engine for regional courts, automating fee computation algorithms, legal case tracking, and electronic receipt generation.",
     highlights: [
-      "Automated legal fee calculation algorithms based on case classifications",
+      "Automated legal fee calculation algorithms based on dynamic case classifications",
       "Containerized deployment using Docker on Linux for zero-downtime reliability",
       "Clean cashier interface with rapid receipt printing and daily closing reconciliation",
     ],
@@ -264,8 +264,8 @@ const projects: Project[] = [
 
 const categoryTabs = [
   { id: "all", label: "All Projects" },
-  { id: "Enterprise & Integrations", label: "Enterprise & Integrations" },
-  { id: "Web & Full-Stack", label: "Web & Full-Stack Development" },
+  { id: "Fintech & B2B Integrations", label: "Fintech & B2B Integrations" },
+  { id: "Enterprise ERP & Full-Stack", label: "Enterprise ERP & Full-Stack" },
 ];
 
 // ==========================================
@@ -412,7 +412,7 @@ export function Projects() {
             Shipped <span className="font-serif italic font-normal text-primary lowercase">Projects</span>
           </h2>
           <p className="text-sm sm:text-base text-muted max-w-xl font-light leading-relaxed">
-            Enterprise banking integrations, WSO2 API gateways, and full-stack software systems engineered for zero-compromise reliability.
+            Enterprise ERP platforms, scalable full-stack applications, and mission-critical B2B fintech integrations engineered for zero-compromise reliability.
           </p>
 
 

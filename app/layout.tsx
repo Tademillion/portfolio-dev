@@ -38,16 +38,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Tadde Million | Full-Stack & Enterprise Developer",
+  title: "Tadde Million | Full-Stack & Enterprise Systems Engineer",
   description:
-    "Professional portfolio of Tadde Million — Full-Stack Developer specializing in high-performance web applications, scalable APIs, and enterprise solutions.",
+    "Professional portfolio of Tadde Million — Full-Stack Software Developer & Enterprise Systems Engineer specializing in scalable web applications, enterprise ERP systems, and mission-critical fintech integrations (ESL, Ethiopian Airlines, NBE, SantimPay).",
   keywords: [
     "Full-Stack Developer",
+    "Enterprise ERP Developer",
     "Next.js",
     "React",
     "Node.js",
     "TypeScript",
     ".NET Core",
+    "SQL Server",
+    "WSO2 API Manager",
+    "Fintech Integrations",
+    "Docker",
+    "Linux",
     "Tadde Million",
     "Portfolio",
   ],
@@ -57,9 +63,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tadde-portfolio.vercel.app",
-    title: "Tadde Million | Full-Stack & Enterprise Developer",
+    title: "Tadde Million | Full-Stack & Enterprise Systems Engineer",
     description:
-      "Professional portfolio of Tadde Million — Full-Stack Developer specializing in high-performance web applications, scalable APIs, and enterprise solutions.",
+      "Professional portfolio of Tadde Million — Full-Stack Software Developer & Enterprise Systems Engineer specializing in scalable web applications, enterprise ERP systems, and mission-critical fintech integrations.",
     siteName: "Tadde Million Portfolio",
   },
   icons: {

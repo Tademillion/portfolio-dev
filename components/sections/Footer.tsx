@@ -57,7 +57,7 @@ export function Footer() {
             <div className="md:col-span-6 space-y-4">
               <CreativeLogoTM />
               <p className="text-sm text-muted leading-relaxed max-w-sm font-light">
-                Full-Stack & Banking Application Developer crafting reliable, secure, and modern digital software.
+                Full-Stack Software Developer & Enterprise Systems Engineer building scalable web applications, robust ERPs, and high-availability fintech integrations.
               </p>
               <div className="flex items-center gap-2 pt-1">
                 <a
@@ -138,13 +138,6 @@ export function Footer() {
             <p>
               © {currentYear} Tadde Million. Built with precision.
             </p>
-            <div className="flex items-center gap-3">
-              <span>Next.js 16</span>
-              <span>•</span>
-              <span>Tailwind CSS</span>
-              <span>•</span>
-              <span>TypeScript</span>
-            </div>
           </div>
         </div>
       </footer>

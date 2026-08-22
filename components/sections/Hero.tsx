@@ -62,7 +62,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-sm sm:text-base text-muted leading-relaxed font-light max-w-xl"
             >
-              Full-Stack Developer & Enterprise Systems Engineer specializing in B2B financial integrations with <strong className="font-medium text-foreground">WSO2 API Manager & Micro Integrator</strong>, <strong className="font-medium text-foreground">Linux OS</strong>, and <strong className="font-medium text-foreground">Docker</strong>. Driven by meticulous attention to detail, proactive root cause analysis (RCA), system monitoring, and high-availability payment roadmap delivery.
+              Full-Stack Developer & Enterprise Systems Engineer crafting scalable web applications, robust ERP platforms, and high-throughput financial pipelines. Experienced in integrating core banking services with <strong className="font-medium text-foreground">Ethiopian Airlines</strong>, <strong className="font-medium text-foreground">ESL</strong>, <strong className="font-medium text-foreground">NBE</strong>, and <strong className="font-medium text-foreground">SantimPay</strong> to ensure reliable financial communication between institutions, backed by containerized Linux microservices and proactive problem resolution.
             </motion.p>
 
             <motion.div
@@ -156,11 +156,21 @@ export function Hero() {
         >
           <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
             <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
+              <Database className="w-4 h-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Scalable Full-Stack & ERPs</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">.NET Core, Next.js, TypeScript, SQL Server & business ERP systems.</p>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
               <Network className="w-4 h-4" />
             </div>
             <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">WSO2 API & B2B Integrations</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Secure financial gateways (ESL, Airlines, NBE, SantimPay & ).</p>
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">Fintech & B2B Integrations</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">WSO2 API & MI for ESL, Ethiopian Airlines, NBE, SantimPay & roadmaps.</p>
             </div>
           </div>
 
@@ -169,18 +179,8 @@ export function Hero() {
               <Container className="w-4 h-4" />
             </div>
             <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">DevOps & Problem Resolution</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Docker on Linux OS, cross-team collaboration & incident RCA.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <Database className="w-4 h-4" />
-            </div>
-            <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Full-Stack & System Reliability</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Architecture reviews, monitoring, performance tuning & SLA targets.</p>
+              <h4 className="font-bold text-xs sm:text-sm text-foreground">DevOps, RCA & Reliability</h4>
+              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Docker on Linux OS, architecture reviews, incident RCA & SLA targets.</p>
             </div>
           </div>
         </motion.div>

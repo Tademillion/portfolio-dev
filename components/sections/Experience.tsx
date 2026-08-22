@@ -21,24 +21,24 @@ import {
 
 const engineeringStandards = [
   {
-    title: "B2B Gateways &  Roadmaps",
-    desc: "Deploying high-throughput API gateways, WSO2 mediation, and driving  / payment roadmap integrations .",
+    title: "Scalable Full-Stack & ERP Systems",
+    desc: "Developing enterprise web applications, ERP modules, and microservices in .NET Core, Next.js, and TypeScript with transactional safety.",
+    icon: Server,
+  },
+  {
+    title: "B2B Fintech & Gateways",
+    desc: "Deploying high-throughput API gateways and WSO2 mediation for ESL, Ethiopian Airlines, NBE, and SantimPay payment roadmaps.",
     icon: Network,
   },
   {
     title: "Monitoring, Incident & RCA",
-    desc: "Conducting continuous telemetry monitoring, architecture reviews, performance optimization, and deep root cause analysis.",
+    desc: "Conducting continuous telemetry monitoring, architecture reviews, performance optimization, and deep root cause analysis (RCA).",
     icon: ShieldCheck,
   },
   {
     title: "DevOps & Containerization",
     desc: "Implementing Docker microservices on Linux OS, streamlining CI/CD processes, and collaborating across teams for issue resolution.",
     icon: Container,
-  },
-  {
-    title: "SLAs & Knowledge Base",
-    desc: "Maintaining technical knowledge bases, tracking performance metrics, and executing service improvements to exceed availability targets.",
-    icon: Database,
   },
 ];
 
@@ -51,16 +51,16 @@ const experiences = [
     period: "March 2024 -Present",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Engineering, securing, and maintaining enterprise financial integrations via Core Banking APIs, inter-institutional B2B communication gateways, and containerized backend services across Linux and Windows production environments.",
+      "Engineering scalable full-stack applications, enterprise ERP/banking utilities, and mission-critical B2B fintech integrations across Linux and Windows production environments.",
     highlights: [
-      "Architected and integrated secure B2B financial communication pipelines connecting Amhara Bank to ESL (customs invoice inquiry & payment confirmation), Ethiopian Airlines, National Bank of Ethiopia (NBE), and SantimPay (school fee payment handling & settlement) using WSO2 API Manager, WSO2 Micro Integrator, and XML synapse mediation code",
-      "Performed continuous system and application monitoring, architecture reviews, performance optimization, incident handling, detailed root cause analysis (RCA), and complete problem management",
-      "Participated actively in the design, testing, and implementation of new banking products, services, functionalities, core system upgrades, and  roadmap delivery",
-      "Implemented DevOps technologies, automated processes, and Docker containerization on Linux OS while collaborating closely with internal and external technical teams for rapid issue resolution",
-      "Maintained comprehensive technical knowledge bases, prepared accurate system performance reports, and executed regular service improvements aligned with strict availability targets",
-      "Engineered resilient backend logic in .NET Core / C# and performed database optimization and schema modeling on SQL Server",
+      "Designed, tested, and deployed mission-critical B2B financial pipelines and roadmap milestones connecting Amhara Bank to Ethiopian Airlines, ESL, NBE, and SantimPay using WSO2 API Manager, Micro Integrator, and XML synapse mediation",
+      "Engineered resilient full-stack applications and enterprise ERP modules in .NET Core, C#, Next.js, and TypeScript with transactional schema modeling on SQL Server",
+      "Conducted 24/7 telemetry monitoring, architecture reviews, performance optimization, incident management, and detailed Root Cause Analysis (RCA) to exceed availability SLAs",
+      "Deployed containerized applications with Docker across Linux OS production servers, collaborating across partner teams for rapid issue resolution",
+      "Participated actively in core system upgrades, digital banking product releases, and automated deployment pipelines",
+      "Authored comprehensive technical documentation, performance reports, and continuous service improvement plans",
     ],
-    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", " / Payment Roadmaps", "Root Cause Analysis (RCA)", "System Monitoring", "REST & SOAP APIs", ".NET Core", "SQL Server"],
+    tech: ["Full-Stack Development", "Enterprise ERPs", ".NET Core", "Next.js", "TypeScript", "WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "SQL Server", "Root Cause Analysis (RCA)", "Payment Roadmaps", "REST & SOAP APIs"],
     icon: Building2,
   },
   {
@@ -78,7 +78,8 @@ const experiences = [
       "Collaborated with senior engineers on containerized microservices, internal utilities, and deployment verification",
       "Mastered banking operational compliance, information security protocols, and enterprise SDLC standards",
     ],
-    tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
+    // tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
+    // tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
     icon: Briefcase,
   },
   {
@@ -100,44 +101,44 @@ const experiences = [
   },
 ];
 
-const professionalReferences = [
-  {
-    id: 1,
-    name: "Senior Software Engineering Supervisor",
-    role: "Lead Enterprise Integration Architect",
-    organization: "Amhara Bank SC",
-    department: "Software Development & Systems Integration Division",
-    relationship: "Direct Engineering Supervisor",
-    quote:
-      "Tadde demonstrated exceptional technical mastery in configuring WSO2 API Manager, Micro Integrator mediation, and Linux Docker containers for our critical B2B financial pipelines (ESL, Ethiopian Airlines, NBE, SantimPay). His attention to detail and proactive problem solving ensure high-reliability, zero-downtime integrations.",
-    icon: Building2,
-    badgeColor: "bg-primary/10 text-primary border-primary/20",
-  },
-  {
-    id: 2,
-    name: "Senior IT Infrastructure & Database Specialist",
-    role: "Database Administrator & Linux Systems Lead",
-    organization: "Amhara Bank SC",
-    department: "IT Infrastructure & Database Operations Division",
-    relationship: "Technical Mentor & Supervisor (Trainee & Junior Dev)",
-    quote:
-      "Working with Tadde across database performance tuning, transaction auditing, and system telemetry monitoring, I found him to be a diligent engineer. He conducts thorough root cause analysis (RCA), manages production incidents calmly, and consistently meets rigorous availability targets.",
-    icon: ShieldCheck,
-    badgeColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
-  },
-  {
-    id: 3,
-    name: "Department Head of Computer Science",
-    role: "Head of Computer Science & Senior Academic Lecturer",
-    organization: "Mekdela Amba University",
-    department: "College of Informatics & Technology",
-    relationship: "Academic Advisor & Capstone Project Supervisor",
-    quote:
-      "Tadde graduated with distinguished academic standing in Computer Science. His solid grasp of data structures, distributed systems, and modern full-stack development, combined with an outstanding work ethic, makes him a valuable software engineer.",
-    icon: GraduationCap,
-    badgeColor: "bg-sky-500/10 text-sky-500 border-sky-500/20",
-  },
-];
+// const professionalReferences = [
+//   {
+//     id: 1,
+//     name: "Senior Software Engineering Supervisor",
+//     role: "Lead Enterprise Integration Architect",
+//     organization: "Amhara Bank SC",
+//     department: "Software Development & Systems Integration Division",
+//     relationship: "Direct Engineering Supervisor",
+//     quote:
+//       "Tadde demonstrated exceptional technical mastery across scalable full-stack development, enterprise ERP modules, WSO2 API Manager, Micro Integrator mediation, and Linux Docker containers for our critical B2B financial pipelines (ESL, Ethiopian Airlines, NBE, SantimPay). His attention to detail, proactive RCA, and problem-solving ensure high-reliability, zero-downtime platforms.",
+//     icon: Building2,
+//     badgeColor: "bg-primary/10 text-primary border-primary/20",
+//   },
+//   {
+//     id: 2,
+//     name: "Senior IT Infrastructure & Database Specialist",
+//     role: "Database Administrator & Linux Systems Lead",
+//     organization: "Amhara Bank SC",
+//     department: "IT Infrastructure & Database Operations Division",
+//     relationship: "Technical Mentor & Supervisor (Trainee & Junior Dev)",
+//     quote:
+//       "Working with Tadde across database performance tuning, transaction auditing, and system telemetry monitoring, I found him to be a diligent engineer. He conducts thorough root cause analysis (RCA), manages production incidents calmly, and consistently meets rigorous availability targets.",
+//     icon: ShieldCheck,
+//     badgeColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+//   },
+//   {
+//     id: 3,
+//     name: "Department Head of Computer Science",
+//     role: "Head of Computer Science & Senior Academic Lecturer",
+//     organization: "Mekdela Amba University",
+//     department: "College of Informatics & Technology",
+//     relationship: "Academic Advisor & Capstone Project Supervisor",
+//     quote:
+//       "Tadde graduated with distinguished academic standing in Computer Science. His solid grasp of data structures, distributed systems, and modern full-stack development, combined with an outstanding work ethic, makes him a valuable software engineer.",
+//     icon: GraduationCap,
+//     badgeColor: "bg-sky-500/10 text-sky-500 border-sky-500/20",
+//   },
+// ];
 
 export function Experience() {
   return (
@@ -154,7 +155,7 @@ export function Experience() {
                 Career & <span className="font-serif italic font-normal text-primary lowercase">Experience</span>
               </h2>
               <p className="text-sm sm:text-base text-muted font-light leading-relaxed">
-                Proven track record in enterprise banking integrations, WSO2 API management, and Linux containerized systems.
+                Proven track record in scalable full-stack software development, enterprise ERP engineering, B2B fintech integrations, and Linux containerized systems.
               </p>
             </div>
 
@@ -248,7 +249,7 @@ export function Experience() {
         </div>
 
         {/* Professional References Section */}
-        <div className="pt-6 border-t border-border/60 space-y-6">
+        {/* <div className="pt-6 border-t border-border/60 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
 
@@ -297,7 +298,7 @@ export function Experience() {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </SectionWrapper>
   );

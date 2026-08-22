@@ -97,7 +97,7 @@ export function OpeningTransition() {
               </div>
 
               <div className="flex justify-between items-center text-[11px] font-mono text-slate-400">
-                <span className="tracking-wider text-slate-500">INITIALIZING</span>
+                <span className="tracking-wider text-slate-500">Loading ...</span>
                 <span className="text-sky-400 font-semibold">{progress}%</span>
               </div>
             </motion.div>
