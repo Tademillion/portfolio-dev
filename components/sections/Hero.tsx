@@ -78,9 +78,8 @@ export function Hero() {
               </a>
 
               <a
-                href="/tadeCv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/tademillioncv.pdf"
+                download="Tadde_Million_CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <FileText className="w-4 h-4" />

@@ -93,9 +93,8 @@ export function Header() {
 
             <div className="flex items-center gap-3">
               <a
-                href="/tadeCv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/tademillioncv.pdf"
+                download="Tadde_Million_CV.pdf"
                 className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <FileText className="w-3.5 h-3.5" />
