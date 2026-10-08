@@ -26,18 +26,18 @@ const engineeringStandards = [
     icon: Server,
   },
   {
-    title: "B2B Fintech & Gateways",
-    desc: "Deploying high-throughput API gateways and WSO2 mediation for ESL, Ethiopian Airlines, NBE, and SantimPay payment roadmaps.",
+    title: "Fintech & Enterprise Gateways",
+    desc: "Deploying high-throughput API gateways and mediation pipelines connecting prominent financial and non-financial institutions across Ethiopia.",
     icon: Network,
   },
   {
-    title: "Monitoring, Incident & RCA",
-    desc: "Conducting continuous telemetry monitoring, architecture reviews, performance optimization, and deep root cause analysis (RCA).",
+    title: "System Architecture & Performance Tuning",
+    desc: "Architecting fault-tolerant, low-latency enterprise backends, conducting comprehensive technical reviews, and ensuring 99.9%+ high-availability SLAs.",
     icon: ShieldCheck,
   },
   {
-    title: "DevOps & Containerization",
-    desc: "Implementing Docker microservices on Linux OS, streamlining CI/CD processes, and collaborating across teams for issue resolution.",
+    title: "DevOps & Production Deployments",
+    desc: "Implementing Docker microservices on Linux OS, streamlining CI/CD processes, and delivering flexible, automated deployment workflows.",
     icon: Container,
   },
 ];
@@ -46,21 +46,21 @@ const experiences = [
   {
     id: "amhara-bank-junior",
     type: "work",
-    title: "Junior Software Developer",
+    title: "Software Developer and Api Integration Officer",
     organization: "Amhara Bank SC",
-    period: "March 2024 -Present",
+    period: "March 2024 – Present",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Engineering scalable full-stack applications, enterprise ERP/banking utilities, and mission-critical B2B fintech integrations across Linux and Windows production environments.",
+      "Engineering scalable full-stack applications, enterprise ERP/banking utilities, and mission-critical fintech integrations across Linux and Windows production environments.",
     highlights: [
-      "Designed, tested, and deployed mission-critical B2B financial pipelines and roadmap milestones connecting Amhara Bank to Ethiopian Airlines, ESL, NBE, and SantimPay using WSO2 API Manager, Micro Integrator, and XML synapse mediation",
+      "Designed, tested, and deployed enterprise API integrations connecting Amhara Bank to ESL, SantimPay (School Pay), Boost Company PLC (House Rent), Telebirr, Ethswitch, and Le Wedaje using Node.js, Express, and secure REST middleware",
       "Engineered resilient full-stack applications and enterprise ERP modules in .NET Core, C#, Next.js, and TypeScript with transactional schema modeling on SQL Server",
-      "Conducted 24/7 telemetry monitoring, architecture reviews, performance optimization, incident management, and detailed Root Cause Analysis (RCA) to exceed availability SLAs",
+      "Engineered high-availability system topologies, conducted architecture reviews, optimized database queries and throughput, and ensured 99.9%+ availability for mission-critical core banking services",
       "Deployed containerized applications with Docker across Linux OS production servers, collaborating across partner teams for rapid issue resolution",
       "Participated actively in core system upgrades, digital banking product releases, and automated deployment pipelines",
       "Authored comprehensive technical documentation, performance reports, and continuous service improvement plans",
     ],
-    tech: ["Full-Stack Development", "Enterprise ERPs", ".NET Core", "Next.js", "TypeScript", "WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "SQL Server", "Root Cause Analysis (RCA)", "Payment Roadmaps", "REST & SOAP APIs"],
+    tech: ["Full-Stack Development", "Node.js & Express Middleware", "FinTech & Payment Gateways", "Enterprise ERPs", ".NET Core", "Next.js", "TypeScript", "ESL & SantimPay", "Ethswitch & Telebirr", "Linux OS", "Docker", "SQL Server", "System Architecture & High Availability", "REST APIs & Webhooks"],
     icon: Building2,
   },
   {
@@ -68,18 +68,17 @@ const experiences = [
     type: "work",
     title: "IT Trainee",
     organization: "Amhara Bank SC",
-    period: "FEB 2024-March  2025",
+    period: "Feb 2024 – March 2024",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Completed intensive 1-year rotational IT and software training across banking operations, Linux/Windows systems administration, database management, and enterprise software engineering workflows.",
+      "Completed intensive rotational IT and software training across banking operations, Linux/Windows systems administration, database management, and enterprise software engineering workflows.",
     highlights: [
       "Gained hands-on proficiency in Linux and Windows server administration, enterprise networking, and banking systems operations",
       "Assisted in database management, transaction log auditing, and SQL query troubleshooting on SQL Server",
       "Collaborated with senior engineers on containerized microservices, internal utilities, and deployment verification",
       "Mastered banking operational compliance, information security protocols, and enterprise SDLC standards",
     ],
-    // tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
-    // tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
+    tech: ["Linux OS", "Banking Systems Operations", "SQL Server", "IT Infrastructure", "Docker Basics", "System Operations"],
     icon: Briefcase,
   },
   {
@@ -110,7 +109,7 @@ const experiences = [
 //     department: "Software Development & Systems Integration Division",
 //     relationship: "Direct Engineering Supervisor",
 //     quote:
-//       "Tadde demonstrated exceptional technical mastery across scalable full-stack development, enterprise ERP modules, WSO2 API Manager, Micro Integrator mediation, and Linux Docker containers for our critical B2B financial pipelines (ESL, Ethiopian Airlines, NBE, SantimPay). His attention to detail, proactive RCA, and problem-solving ensure high-reliability, zero-downtime platforms.",
+//       "Tadde demonstrated exceptional technical mastery across scalable full-stack development, enterprise ERP modules, WSO2 API Manager, Micro Integrator mediation, and Linux Docker containers for our critical financial pipelines (ESL, Ethiopian Airlines, NBE, SantimPay). His attention to detail, proactive RCA, and problem-solving ensure high-reliability, zero-downtime platforms.",
 //     icon: Building2,
 //     badgeColor: "bg-primary/10 text-primary border-primary/20",
 //   },
@@ -155,7 +154,7 @@ export function Experience() {
                 Career & <span className="font-serif italic font-normal text-primary lowercase">Experience</span>
               </h2>
               <p className="text-sm sm:text-base text-muted font-light leading-relaxed">
-                Proven track record in scalable full-stack software development, enterprise ERP engineering, B2B fintech integrations, and Linux containerized systems.
+                Proven track record in scalable full-stack software development, enterprise ERP engineering, fintech integrations, and flexible, production-grade deployment systems.
               </p>
             </div>
 

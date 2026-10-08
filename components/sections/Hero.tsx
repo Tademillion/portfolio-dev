@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Mail, FileText, Github, Linkedin, ShieldCheck, Database, Sparkles, Terminal, Network, Container } from "lucide-react";
+import { Mail, FileText, Github, Linkedin, Sparkles } from "lucide-react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export function Hero() {
@@ -43,7 +43,7 @@ export function Hero() {
           <div className="space-y-5 text-center md:text-left flex-1">
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Junior Software Developer · Amhara Bank SC</span>
+              <span>Software Developer and Api Integration Officer · Amhara Bank SC</span>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-2">
@@ -62,7 +62,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-sm sm:text-base text-muted leading-relaxed font-light max-w-xl"
             >
-              Full-Stack Developer & Enterprise Systems Engineer crafting scalable web applications, robust ERP platforms, and high-throughput financial pipelines. Experienced in integrating core banking services with <strong className="font-medium text-foreground">Ethiopian Airlines</strong>, <strong className="font-medium text-foreground">ESL</strong>, <strong className="font-medium text-foreground">NBE</strong>, and <strong className="font-medium text-foreground">SantimPay</strong> to ensure reliable financial communication between institutions, backed by containerized Linux microservices and proactive problem resolution.
+              Experienced Full-Stack Developer & Enterprise Systems Engineer proficient across a versatile technology stack, crafting scalable web applications, robust ERP platforms, and high-throughput backend systems. Adept at architecting mission-critical integrations across <strong className="font-medium text-foreground">major Ethiopian financial institutions</strong>, payment gateways, and enterprise services, backed by containerized Linux microservices and proactive problem resolution.
             </motion.p>
 
             <motion.div
@@ -149,40 +149,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="grid sm:grid-cols-3 gap-4 pt-6 border-t border-border/60"
-        >
-          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <Database className="w-4 h-4" />
-            </div>
-            <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Scalable Full-Stack & ERPs</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">.NET Core, Next.js, TypeScript, SQL Server & business ERP systems.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <Network className="w-4 h-4" />
-            </div>
-            <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">Fintech & B2B Integrations</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">WSO2 API & MI for ESL, Ethiopian Airlines, NBE, SantimPay & roadmaps.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0 mt-0.5">
-              <Container className="w-4 h-4" />
-            </div>
-            <div className="space-y-0.5">
-              <h4 className="font-bold text-xs sm:text-sm text-foreground">DevOps, RCA & Reliability</h4>
-              <p className="text-[11px] sm:text-xs text-muted leading-relaxed font-light">Docker on Linux OS, architecture reviews, incident RCA & SLA targets.</p>
-            </div>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );

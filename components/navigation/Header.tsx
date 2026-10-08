@@ -10,9 +10,9 @@ import { Home, FileText, User, FolderGit2, Briefcase, Wrench, MessageSquare } fr
 const navLinks = [
   { label: "Home", href: "#home", icon: Home },
   { label: "About", href: "#about", icon: User },
-  { label: "Skills", href: "#skills", icon: Wrench },
-  { label: "Projects", href: "#projects", icon: FolderGit2 },
   { label: "Experience", href: "#experience", icon: Briefcase },
+  { label: "Projects", href: "#projects", icon: FolderGit2 },
+  { label: "Skills", href: "#skills", icon: Wrench },
   { label: "Contact", href: "#contact", icon: MessageSquare },
 ];
 
@@ -130,13 +130,13 @@ export function Header() {
           </a>
 
           <a
-            href="#skills"
+            href="#experience"
             className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "skills" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+              activeSection === "experience" ? "text-primary font-bold" : "text-muted hover:text-foreground"
             }`}
           >
-            <Wrench className="w-4 h-4" />
-            <span>Skills</span>
+            <Briefcase className="w-4 h-4" />
+            <span>Experience</span>
           </a>
 
           <a
@@ -150,13 +150,13 @@ export function Header() {
           </a>
 
           <a
-            href="#experience"
+            href="#skills"
             className={`flex flex-col items-center gap-1 p-1.5 rounded-xl text-[10px] font-medium transition-colors ${
-              activeSection === "experience" ? "text-primary font-bold" : "text-muted hover:text-foreground"
+              activeSection === "skills" ? "text-primary font-bold" : "text-muted hover:text-foreground"
             }`}
           >
-            <Briefcase className="w-4 h-4" />
-            <span>Experience</span>
+            <Wrench className="w-4 h-4" />
+            <span>Skills</span>
           </a>
 
           <a

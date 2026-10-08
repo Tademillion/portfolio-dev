@@ -19,9 +19,9 @@ export default function Page() {
       <Header />
       <Hero />
       <About />
-      <Skills />
-      <Projects />
       <Experience />
+      <Projects />
+      <Skills />
       <Contact />
       <Footer />
     </main>

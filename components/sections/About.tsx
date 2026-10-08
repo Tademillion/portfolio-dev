@@ -21,42 +21,42 @@ import {
 const disciplines = [
   {
     title: "Scalable Full-Stack Engineering",
-    desc: "Engineering end-to-end web applications, microservices, and reactive UIs in Next.js, React, TypeScript, and .NET Core with clean database architectures and modular code.",
+    desc: "Engineering end-to-end web applications, microservices, and reactive UIs in Next.js, React, Node.js, and .NET Core with clean database architectures and modular code.",
     icon: Code2,
   },
   {
     title: "Enterprise ERP & Business Systems",
-    desc: "Developing multi-module ERP platforms including HR & payroll, multi-warehouse stock inventory, fiscal budget forecasting, and workflow automation with strict transactional safety.",
+    desc: "Developing multi-module enterprise systems including HR & leave platforms, multi-warehouse stock inventory, judicial court fee accounting, and workflow automation with strict transactional safety.",
     icon: Database,
   },
   {
-    title: "B2B Fintech & Gateway Integrations",
-    desc: "Architecting and securing inter-institutional financial communication pipelines (ESL, Ethiopian Airlines, NBE, SantimPay) with WSO2 API Manager, Micro Integrator & mTLS.",
+    title: "Fintech & Enterprise Integrations",
+    desc: "Architecting and securing mission-critical financial and non-financial communication pipelines between prominent institutions with WSO2 API Manager, Micro Integrator & mTLS.",
     icon: Network,
   },
   {
-    title: "DevOps, Incident RCA & Reliability",
-    desc: "Deploying Docker containerized microservices on Linux OS, performing architecture reviews, incident management, and deep Root Cause Analysis (RCA) to uphold strict availability SLAs.",
+    title: "DevOps, Linux & Cloud Reliability",
+    desc: "Deploying Docker containerized microservices on Linux environments, orchestrating reverse proxies, and maintaining CI/CD deployment pipelines to guarantee maximum uptime.",
     icon: Container,
   },
 ];
 
 const operationalPillars = [
   {
-    title: "Scalable Full-Stack & ERP Standards",
-    desc: "Writing maintainable, type-safe code across Next.js and .NET Core, implementing normalized database schemas, and building enterprise business logic with zero data loss tolerance.",
+    title: "Scalable Full-Stack Engineering & Clean Code",
+    desc: "Developing responsive, type-safe web applications and modular backends across Next.js, React, Node.js, Express, and .NET Core with normalized databases, reusable architecture, and zero data loss tolerance.",
   },
   {
-    title: "Incident Handling & Root Cause Analysis (RCA)",
-    desc: "Conducting proactive 24/7 telemetry monitoring, architecture reviews, performance tuning, and structured root cause analyses (RCA) for complete problem lifecycle management.",
+    title: "Enterprise System & Gateway Integrations",
+    desc: "Architecting secure, high-throughput integration pipelines between core banking and prominent financial and non-financial institutions, with real-time webhook validation, automated settlement reconciliations, and robust mTLS security.",
   },
   {
-    title: "Product Design, Testing & Roadmap Delivery",
-    desc: "Participating actively in the end-to-end design, rigorous unit/integration testing, and deployment of mission-critical services, core upgrades, and payment roadmap milestones.",
+    title: "Architectural Design, Testing & Roadmap Execution",
+    desc: "Driving end-to-end software lifecycles through modular system design, comprehensive unit and integration testing, and rigorous architecture reviews to deliver mission-critical platforms with high velocity and precision.",
   },
   {
-    title: "Linux DevOps & Continuous Improvement",
-    desc: "Deploying containerized microservices via Docker on Linux production hosts, maintaining comprehensive technical knowledge bases, and driving continuous service improvements.",
+    title: "Linux DevOps, Containerization & High Availability",
+    desc: "Deploying containerized microservices via Docker on enterprise Linux hosts, configuring reverse proxies, and establishing resilient deployment pipelines to ensure uninterrupted 99.9%+ system availability.",
   },
 ];
 
@@ -81,13 +81,13 @@ export function About() {
           <div className="lg:col-span-6 space-y-6">
             <div className="p-7 sm:p-8 rounded-3xl border border-border/80 bg-card shadow-sm space-y-4 text-muted leading-relaxed font-light text-base">
               <p className="text-foreground font-medium text-lg">
-                I am a Full-Stack Software Developer & Enterprise Systems Engineer with over 2 years of experience architecting scalable web applications, enterprise ERP solutions, and high-volume fintech gateways.
+                I am a Full-Stack Software Developer & Enterprise Systems Engineer specializing in architecting modern web applications, scalable enterprise systems, and high-volume integration pipelines.
               </p>
               <p>
-                Currently at <span className="text-foreground font-medium">Amhara Bank SC</span>, I engineer and integrate core banking services with key enterprise partners—including <span className="text-foreground font-medium">Ethiopian Airlines</span>, <span className="text-foreground font-medium">ESL</span>, <span className="text-foreground font-medium">National Bank of Ethiopia (NBE)</span>, and <span className="text-foreground font-medium">SantimPay</span>—to ensure seamless, secure financial communication and real-time transaction settlement between institutions.
+                Currently at <span className="text-foreground font-medium">Amhara Bank SC</span>, I engineer and integrate core banking services with prominent financial and non-financial institutions across Ethiopia. My work bridges disparate enterprise platforms by delivering high-throughput, secure API gateways, real-time webhook processing, automated transaction settlements, and rigorous data consistency.
               </p>
               <p>
-                My expertise spans full-stack ERP engineering (.NET Core, Next.js, SQL Server), payment roadmap delivery, architecture reviews, proactive incident management, and detailed Root Cause Analysis (RCA)—backed by containerized microservice deployments on <span className="text-foreground font-medium">Linux OS</span> and <span className="text-foreground font-medium">Docker</span>.
+                Beyond system integrations, I build end-to-end full-stack applications across multiple programming languages and tech stacks—pairing responsive, performant user interfaces in <span className="text-foreground font-medium">Next.js & React</span> with robust backend microservices in <span className="text-foreground font-medium">.NET Core, Node.js & Express</span>. My database engineering spans both relational and non-relational databases, including <span className="text-foreground font-medium">SQL Server, MySQL, and MongoDB</span>, ensuring high transactional integrity, flexible data models, and disciplined architectural standards.
               </p>
             </div>
 
@@ -100,7 +100,7 @@ export function About() {
                 </div>
                 <h4 className="font-bold text-sm text-foreground">Amhara Bank SC</h4>
                 <p className="text-xs text-muted font-light leading-relaxed">
-                  Junior Software Developer (2+ Years Career)
+                  Software Developer and Api Integration Officer (2+ Years Career)
                 </p>
               </div>
 

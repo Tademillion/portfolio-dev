@@ -40,7 +40,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Tadde Million | Full-Stack & Enterprise Systems Engineer",
   description:
-    "Professional portfolio of Tadde Million — Full-Stack Software Developer & Enterprise Systems Engineer specializing in scalable web applications, enterprise ERP systems, and mission-critical fintech integrations (ESL, Ethiopian Airlines, NBE, SantimPay).",
+    "Professional portfolio of Tadde Million — Full-Stack Software Developer & Enterprise Systems Engineer specializing in scalable web applications, enterprise ERP systems, and robust financial and enterprise API integrations across Ethiopia.",
   keywords: [
     "Full-Stack Developer",
     "Enterprise ERP Developer",

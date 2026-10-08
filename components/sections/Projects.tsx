@@ -10,418 +10,154 @@ import {
   X,
   Sparkles,
   Network,
-  ArrowRight,
-  ArrowLeft,
-  ArrowLeftRight,
-  ShieldCheck,
-  Zap,
-  Lock,
-  RefreshCw,
-  Landmark,
-  Plane,
-  Ship,
-  Scale,
-  Smartphone,
 } from "lucide-react";
 
-// ==========================================
-// OFFICIAL COMPANY LOGOS FROM /img/ & /
-// ==========================================
-
-export function AmharaBankLogo({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-sm ${className}`}>
-      <Image
-        src="/img/amharabanklogo.jpg"
-        alt="Amhara Bank"
-        fill
-        className="object-contain p-0.5"
-      />
-    </div>
-  );
-}
-
-export function EthiopianAirlinesLogo({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-sm ${className}`}>
-      <Image
-        src="/img/EthAirLineLogo.png"
-        alt="Ethiopian Airlines"
-        fill
-        className="object-contain p-0.5"
-      />
-    </div>
-  );
-}
-
-export function ESLLogo({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-sm ${className}`}>
-      <Image
-        src="/img/ESLLogo.png"
-        alt="Ethiopian Shipping & Logistics"
-        fill
-        className="object-contain p-0.5"
-      />
-    </div>
-  );
-}
-
-export function NBELogo({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-sm ${className}`}>
-      <Image
-        src="/img/NbeLogo.png"
-        alt="National Bank of Ethiopia"
-        fill
-        className="object-contain p-0.5"
-      />
-    </div>
-  );
-}
-
-export function SantimPayLogo({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-sm ${className}`}>
-      <Image
-        src="/santimpay.png"
-        alt="SantimPay"
-        fill
-        className="object-contain p-0.5"
-      />
-    </div>
-  );
-}
-
-
-interface Project {
-  id: number;
+interface FullStackProject {
+  id: string;
   title: string;
-  category: "Fintech & B2B Integrations" | "Enterprise ERP & Full-Stack";
+  systemName: string;
   tagline: string;
   overview: string;
   highlights: string[];
   tech: string[];
-  image?: string;
-  isIntegration?: boolean;
-  integrationPartner?: "Ethiopian Airlines" | "ESL" | "NBE" | "SantimPay";
-  partnerSubtitle?: string;
+  image: string;
+  metrics?: string;
 }
 
-const projects: Project[] = [
+interface IntegratedCompany {
+  name: string;
+  category: string;
+  scope: string;
+}
+
+const fullStackProjects: FullStackProject[] = [
   {
-    id: 1,
-    title: "Amhara Bank ⇄ Ethiopian Airlines Integration",
-    category: "Fintech & B2B Integrations",
-    tagline: "Ticketing Revenue Settlement & Corporate Banking Gateway",
+    id: "court-fee-system",
+    title: "Judicial Court Fee Management System",
+    systemName: "Court Management System",
+    tagline: "Regional Court Case Accounting, Dynamic Statutory Fee Computation & Electronic Receipting",
     overview:
-      "Mission-critical bidirectional B2B financial integration connecting Amhara Bank's financial APIs with Ethiopian Airlines. Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code, containerized in Docker on Linux OS, the platform enables real-time ticket purchase authorizations, corporate account automated settlements, and automated booking payment reconciliations via REST and SOAP APIs.",
+      "A mission-critical financial accounting and fee collection platform engineered for regional judicial courts. The system centralizes case registry accounting, dynamically computes statutory legal fees based on multi-tiered case classifications, and provides cashiers with rapid POS-style receipt printing and daily end-of-shift reconciliation with zero financial discrepancy.",
     highlights: [
-      "Bidirectional airline ticket payment authorization and settlement API gateway via WSO2 API Manager",
-      "Engineered XML synapse mediation sequences in WSO2 Micro Integrator for REST and SOAP payload transformations",
-      "Automated end-of-day revenue reconciliation and ledger posting to Core Banking APIs",
-      "Containerized Micro Integrator deployment with Docker on Linux OS production servers",
-      "Encrypted mTLS communication and JWT token authentication for institutional integrity",
+      "Dynamic statutory fee calculation algorithms supporting complex multi-tier judicial case classifications and litigation types",
+      "Streamlined cashier interface with instant thermal/PDF receipt printing and automated shift closing balance verification",
+      "Containerized microservice architecture deployed using Docker on Linux OS for high reliability and zero downtime",
+      "Immutable transactional audit trails capturing every cashier activity, fee waiver, and case payment status transition",
+      "Responsive, clean UI designed for fast keyboard navigation and high cashier throughput under peak operational hours",
     ],
-    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", "REST APIs", "SOAP APIs", "mTLS Security"],
-    isIntegration: true,
-    integrationPartner: "Ethiopian Airlines",
-    partnerSubtitle: "National Carrier · Ticket Revenue & Corporate Settlement",
+    tech: ["Next.js", "React", "Node.js", "MongoDB", "Docker", "Tailwind CSS"],
+    image: "/projects/court-systems.jpg",
+    metrics: "Sub-second Fee Computation · Zero Audit Discrepancies",
   },
   {
-    id: 2,
-    title: "Amhara Bank ⇄ ESL Logistics Payment System Integration",
-    category: "Fintech & B2B Integrations",
-    tagline: "Customer Invoice Inquiry, Validation & Real-Time Payment Confirmation Gateway",
+    id: "hr-leave-system",
+    title: "Enterprise HR & Leave Management System",
+    systemName: "HR Management System",
+    tagline: "Institutional Employee Lifecycle Logistics, Departmental Hierarchies & Automated Leave Workflows",
     overview:
-      "Technical integration with the ESL (Ethiopian Shipping and Logistics) Payment System APIs for authorized banks and Payment Service Providers (PSPs). Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the platform provides secure, standardized REST-based interfaces supporting customer invoice inquiry, real-time bill validation, and instant payment confirmation to ensure reliable and secure freight clearance processing.",
+      "Enterprise human resource management platform developed for large institutional workforce lifecycle tracking. It manages complex departmental hierarchies, automates multi-stage employee leave application and approval chains, and performs algorithmic attendance and leave balance reconciliation.",
     highlights: [
-      "Engineered secure, standardized REST-based interfaces for real-time customer invoice inquiry and validation",
-      "Automated instant payment confirmation and receipt token dispatch conforming to ESL technical specifications",
-      "XML synapse mediation in WSO2 Micro Integrator for request/response formatting and protocol transformation",
-      "Robust authentication, request/response verification, and mTLS security requirements for institutional PSP processing",
-      "Containerized high-availability Micro Integrator deployment with Docker on Linux OS with transactional audit logging",
-    ],
-    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", "REST APIs", "SOAP APIs", "mTLS Security"],
-    isIntegration: true,
-    integrationPartner: "ESL",
-    partnerSubtitle: "Ethiopian Shipping & Logistics · Invoice Inquiry, Validation & Payment Confirmation",
-  },
-  {
-    id: 3,
-    title: "Amhara Bank ⇄ NBE Regulatory Integration",
-    category: "Fintech & B2B Integrations",
-    tagline: "Mandatory Central Bank Regulatory Reporting & RTGS Clearing Feed",
-    overview:
-      "Secure institutional financial pipeline connecting Amhara Bank directly to the National Bank of Ethiopia (NBE). Engineered using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the system automates mandatory regulatory monetary compliance reporting, Real-Time Gross Settlement (RTGS) inter-bank transaction reporting, and central reserve auditing data streams.",
-    highlights: [
-      "Automated RTGS (Real-Time Gross Settlement) clearing transaction data pipelines",
-      "XML synapse mediation in WSO2 Micro Integrator for XML payload translation across REST and SOAP endpoints",
-      "Direct compliance data feed complying with National Bank of Ethiopia regulatory guidelines",
-      "Containerized WSO2 Micro Integrator running in Docker on Linux OS server infrastructure",
-      "End-to-end payload encryption, digital signatures, and audit trail generation",
-    ],
-    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", "REST APIs", "SOAP APIs", "mTLS Security"],
-    isIntegration: true,
-    integrationPartner: "NBE",
-    partnerSubtitle: "National Bank of Ethiopia · Regulatory & RTGS Clearing",
-  },
-  {
-    id: 4,
-    title: "Amhara Bank ⇄ SantimPay School Fee Payment Integration",
-    category: "Fintech & B2B Integrations",
-    tagline: "Digital School Fee Collection, Student Bill Inquiry & Tuition Settlement Gateway",
-    overview:
-      "Bidirectional fintech payment gateway integration connecting Amhara Bank's financial APIs with SantimPay for digital school payment handling. Built using WSO2 API Manager and WSO2 Micro Integrator with XML synapse mediation code in Docker on Linux OS, the platform enables real-time student tuition fee inquiry, automated bill validation, instant digital tuition payment confirmation, and automated ledger settlement to educational institutions' bank accounts.",
-    highlights: [
-      "Real-time student fee invoice inquiry and automated bill validation across participating educational institutions",
-      "Instant digital tuition payment confirmation and receipt token dispatch to SantimPay gateway",
-      "XML synapse mediation in WSO2 Micro Integrator for REST and SOAP payload transformations between bank host and SantimPay",
-      "Automated school account ledger posting and end-of-day tuition revenue reconciliation",
-      "Containerized Micro Integrator deployment with Docker on Linux OS with mTLS authentication and strict ACID transaction safety",
-    ],
-    tech: ["WSO2 API Manager", "WSO2 Micro Integrator", "Linux OS", "Docker", "XML Code", "REST APIs", "SOAP APIs", "mTLS Security"],
-    isIntegration: true,
-    integrationPartner: "SantimPay",
-    partnerSubtitle: "SantimPay Payment Switch · School Fee Collection & Tuition Settlement",
-  },
-  {
-    id: 5,
-    title: "Enterprise HR & Leave Management system Platform",
-    category: "Enterprise ERP & Full-Stack",
-    tagline: "Workforce Logistics, Multi-Department Hierarchies & Automated leave manageemnt system",
-    overview:
-      "Enterprise human resource management platform built for institutional employee lifecycle tracking, organizational hierarchies, and automated leave manageemnt system.",
-    highlights: [
-      "Role-based permissions matrix for departmental isolation and multi-tier access control",
-      "Automated attendance, leave tracking, and payroll reconciliation algorithms",
-      "High-throughput reporting queries optimized for sub-second execution on SQL Server",
+      "Granular role-based access control (RBAC) matrix for strict departmental isolation and multi-tier organizational approval chains",
+      "Automated employee attendance tracking, statutory leave entitlement calculations, and balance rollover algorithms",
+      "High-throughput transactional database queries tuned for sub-second execution on Microsoft SQL Server",
+      "Institutional reporting engine generating comprehensive staff analytics, leave utilization, and departmental audit logs",
+      "Type-safe backend architecture built with .NET Core and C# ensuring enterprise stability and data integrity",
     ],
     tech: [".NET Core", "C#", "SQL Server", "DevExpress", "IIS"],
     image: "/img/hr-management.png",
+    metrics: "Multi-Tier Approval Chains · High-Throughput SQL Queries",
   },
   {
-    id: 6,
+    id: "stock-inventory-system",
     title: "Stock & Warehouse Inventory ERP",
-    category: "Enterprise ERP & Full-Stack",
-    tagline: "Multi-Warehouse Inventory Tracking, FIFO Valuation & Automated Reorder",
+    systemName: "Stock Management System",
+    tagline: "Multi-Warehouse Inventory Tracking, FIFO Valuation & Automated Vendor Reordering",
     overview:
-      "High-precision inventory system providing real-time stock balances, dynamic minimum-threshold warnings, multi-warehouse transfers, and vendor purchase requisition workflows.",
+      "High-precision inventory and supply chain ERP delivering real-time stock visibility across distributed enterprise warehouses. Features automated FIFO (First-In, First-Out) valuation algorithms, dynamic threshold warnings, inter-warehouse transfer authorizations, and vendor purchase requisition workflows.",
     highlights: [
-      "Real-time stock balance tracking with automated FIFO inventory valuation",
-      "Automated threshold alarms and vendor procurement dispatch workflows",
-      "Immutable transaction auditing for enterprise compliance and internal audits",
+      "Real-time stock balance tracking with automated FIFO inventory valuation and cost-of-goods calculation algorithms",
+      "Automated minimum-threshold alerts triggering automated purchase requisitions and supplier replenishment pipelines",
+      "Multi-warehouse transfer workflows with dual-custody verification (dispatch and receive verification) to eliminate shrinkage",
+      "Immutable transaction auditing for enterprise compliance, periodic physical counts, and internal audit verification",
+      "Optimized database schema handling concurrent inventory transactions with strict ACID consistency guarantees",
     ],
-    tech: [".NET Core", "SQL Server", "DevExpress", "Windows Server"],
+    tech: [".NET Core", "C#", "SQL Server", "DevExpress", "Windows Server"],
     image: "/img/stock-management.png",
-  },
-  {
-    id: 7,
-    title: "Fiscal Budget & Planning ERP Platform",
-    category: "Enterprise ERP & Full-Stack",
-    tagline: "Organizational Forecasting, Expense Authorizations & Multi-Tier Approvals",
-    overview:
-      "Modern financial planning platform facilitating organizational budget distribution, dynamic expense authorization workflows, and multi-tier analytics.",
-    highlights: [
-      "Interactive multi-tier approval chains with real-time budget burn rate tracking",
-      "Type-safe REST API bridge between Next.js frontend and .NET Core microservices",
-      "Custom analytics dashboard with instant exportable financial reports",
-    ],
-    tech: ["Next.js", ".NET Core", "TypeScript", "Tailwind CSS", "SQL Server"],
-    image: "/projects/budget-planning.jpg",
-  },
-  {
-    id: 8,
-    title: "Cryptographic Letter Verification System",
-    category: "Enterprise ERP & Full-Stack",
-    tagline: "Tamper-Proof Document Authentication & Real-Time QR Verification",
-    overview:
-      "High-security document verification platform that eliminates counterfeit official correspondence through cryptographic payload hashing and instant public QR validation.",
-    highlights: [
-      "Tamper-evident document hashing and instant verification via public QR codes",
-      "Scalable RESTful microservice handling concurrent document lookups with caching",
-      "Complete immutable audit trail of verification scans and authorization attempts",
-    ],
-    tech: ["Next.js", "Node.js", "Express", "MongoDB", "TypeScript"],
-    image: "/projects/letter-verification.jpg",
-  },
-  {
-    id: 9,
-    title: "Judicial Court Fee Management System",
-    category: "Enterprise ERP & Full-Stack",
-    tagline: "Regional Court Case Accounting, Fee Computation & Electronic Receipting",
-    overview:
-      "Centralized fee collection and reconciliation engine for regional courts, automating fee computation algorithms, legal case tracking, and electronic receipt generation.",
-    highlights: [
-      "Automated legal fee calculation algorithms based on dynamic case classifications",
-      "Containerized deployment using Docker on Linux for zero-downtime reliability",
-      "Clean cashier interface with rapid receipt printing and daily closing reconciliation",
-    ],
-    tech: ["Next.js", "React", "Node.js", "Docker", "MongoDB", "Tailwind CSS"],
-    image: "/projects/court-systems.jpg",
+    metrics: "Real-Time Balance Tracking · FIFO Inventory Valuation",
   },
 ];
 
-const categoryTabs = [
-  { id: "all", label: "All Projects" },
-  { id: "Fintech & B2B Integrations", label: "Fintech & B2B Integrations" },
-  { id: "Enterprise ERP & Full-Stack", label: "Enterprise ERP & Full-Stack" },
+const integratedCompanies: IntegratedCompany[] = [
+  {
+    name: "Ethiopian Shipping & Logistics (ESL)",
+    category: "Logistics & Customs",
+    scope: "Multimodal Cargo Freight Clearance & Invoicing",
+  },
+  {
+    name: "SantimPay (School Pay)",
+    category: "Educational FinTech",
+    scope: "Digital Tuition & School Fee Collection Switch",
+  },
+  {
+    name: "Boost Software Development PLC",
+    category: "Software Development",
+    scope: "House Rent Verification & Landlord Settlement",
+  },
+  {
+    name: "Telebirr (Ethio Telecom)",
+    category: "Digital Payment Switch",
+    scope: "Dynamic Web Checkout & Payment Callbacks",
+  },
+  {
+    name: "Ethswitch",
+    category: "National Payment Switch",
+    scope: "Inter-Bank Interoperability & Routing",
+  },
+  {
+    name: "Kifiya Financial Technology",
+    category: "FinTech",
+    scope: "Digital Lending Application",
+  },
 ];
 
-// ==========================================
-// INTERACTIVE INTEGRATION FLOW CARD BANNER
-// ==========================================
-
-function IntegrationCardBanner({
-  partner,
-  isModal = false,
-}: {
-  partner: "Ethiopian Airlines" | "ESL" | "NBE" | "SantimPay";
-  isModal?: boolean;
-}) {
-  const partnerConfig = {
-    "Ethiopian Airlines": {
-      name: "Ethiopian Airlines",
-      code: "ET / EAL",
-      logo: EthiopianAirlinesLogo,
-      badgeColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
-      accentGlow: "from-emerald-500/15 via-teal-500/5 to-transparent",
-      serviceTag: "Ticket Revenue & Settlement",
-    },
-    ESL: {
-      name: "Ethiopian Shipping & Logistics",
-      code: "ESLSE",
-      logo: ESLLogo,
-      badgeColor: "bg-sky-500/10 text-sky-500 border-sky-500/20",
-      accentGlow: "from-sky-500/15 via-blue-500/5 to-transparent",
-      serviceTag: "Invoice Inquiry, Validation & Payment",
-    },
-    NBE: {
-      name: "National Bank of Ethiopia",
-      code: "NBE / Central Bank",
-      logo: NBELogo,
-      badgeColor: "bg-amber-500/10 text-amber-500 border-amber-500/20",
-      accentGlow: "from-amber-500/15 via-orange-500/5 to-transparent",
-      serviceTag: "Regulatory RTGS & Compliance",
-    },
-    SantimPay: {
-      name: "SantimPay",
-      code: "SantimPay / Fintech Switch",
-      logo: SantimPayLogo,
-      badgeColor: "bg-purple-500/10 text-purple-500 border-purple-500/20",
-      accentGlow: "from-purple-500/15 via-indigo-500/5 to-transparent",
-      serviceTag: "School Fee Collection & Tuition Settlement",
-    },
-  }[partner];
-
-  const PartnerLogo = partnerConfig.logo;
-
-  return (
-    <div
-      className={`relative w-full overflow-hidden bg-gradient-to-br ${partnerConfig.accentGlow} bg-card border-b border-border/60 ${isModal ? "p-5 sm:p-7 rounded-2xl border" : "p-4 sm:p-5"
-        }`}
-    >
-      {/* Background ambient pulse line */}
-      <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none" />
-
-      <div className="relative z-10 flex items-center justify-between gap-2 sm:gap-4">
-        {/* Left Side: Amhara Bank */}
-        <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
-          <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-card border border-border/80 shadow-md p-1 flex items-center justify-center shrink-0 group-hover:border-primary/40 transition-colors">
-            <AmharaBankLogo className="w-9 h-9 sm:w-11 sm:h-11" />
-          </div>
-          <div className="min-w-0">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-primary truncate block">
-              Origin
-            </span>
-            <h4 className="text-xs sm:text-sm font-extrabold text-foreground truncate">
-              Amhara Bank
-            </h4>
-            <p className="text-[10px] text-muted truncate hidden sm:block">Core Banking API</p>
-          </div>
-        </div>
-
-        {/* Center: Bidirectional WSO2 API Gateway Flow Indicator */}
-        <div className="flex flex-col items-center justify-center shrink-0 px-1 sm:px-2">
-          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-[9px] font-mono text-primary font-bold">
-            <Network className="w-3 h-3" />
-            <span className="hidden sm:inline">WSO2 API & MI</span>
-          </div>
-
-          <div className="flex items-center gap-1 my-1 text-primary">
-            <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary animate-pulse" />
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
-            <div className="w-4 sm:w-7 h-[2px] bg-gradient-to-r from-primary via-emerald-500 to-primary rounded-full" />
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 animate-pulse" />
-          </div>
-
-          <span className="text-[8px] font-mono text-muted uppercase tracking-tighter hidden sm:inline">
-            ⇄ Bidirectional · REST/SOAP
-          </span>
-        </div>
-
-        {/* Right Side: Destination Institution */}
-        <div className="flex items-center gap-2.5 sm:gap-3 flex-1 justify-end min-w-0 text-right">
-          <div className="min-w-0">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-500 truncate block">
-              Partner
-            </span>
-            <h4 className="text-xs sm:text-sm font-extrabold text-foreground truncate">
-              {partnerConfig.name}
-            </h4>
-            <p className="text-[10px] text-muted truncate hidden sm:block">{partnerConfig.code}</p>
-          </div>
-
-          <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-card border border-border/80 shadow-md p-1 flex items-center justify-center shrink-0 group-hover:border-primary/40 transition-colors">
-            <PartnerLogo className="w-9 h-9 sm:w-11 sm:h-11" />
-          </div>
-        </div>
-      </div>
-
-      {/* Protocol ribbon at bottom of banner */}
-      <div className="mt-3 pt-2.5 border-t border-border/40 flex items-center justify-between text-[10px] text-muted font-mono">
-        <span className="flex items-center gap-1 truncate text-foreground font-medium">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-          {partnerConfig.serviceTag}
-        </span>
-      </div>
-    </div>
-  );
-}
-
+const tabs = [
+  { id: "all", label: "All Deliverables" },
+  { id: "fullstack", label: "Full-Stack Systems" },
+  { id: "integrations", label: "FinTech & API Integrations" },
+];
 
 export function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("all");
+  const [activeModalProject, setActiveModalProject] = useState<FullStackProject | null>(null);
 
-  const filteredProjects =
-    selectedCategory === "all"
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+  const showFullStack = activeTab === "all" || activeTab === "fullstack";
+  const showIntegrations = activeTab === "all" || activeTab === "integrations";
 
   return (
     <SectionWrapper id="projects">
       <div className="max-w-5xl mx-auto space-y-12">
+        {/* Section Header */}
         <div className="text-center md:text-left space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Production Deployments</span>
+            <span>Full-Stack Engineering & FinTech Integration</span>
           </div>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground uppercase">
-            Shipped <span className="font-serif italic font-normal text-primary lowercase">Projects</span>
+            Shipped <span className="font-serif italic font-normal text-primary lowercase">Systems & Integrations</span>
           </h2>
-          <p className="text-sm sm:text-base text-muted max-w-xl font-light leading-relaxed">
-            Enterprise ERP platforms, scalable full-stack applications, and mission-critical B2B fintech integrations engineered for zero-compromise reliability.
+
+          <p className="text-sm sm:text-base text-muted max-w-2xl font-light leading-relaxed">
+            Enterprise full-stack platforms and production FinTech payment gateways engineered with strict ACID transaction safety, idempotency, webhook security, and zero-loss financial reconciliation.
           </p>
 
-
+          {/* View Filter Tabs */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-3">
-            {categoryTabs.map((tab) => (
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setSelectedCategory(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${selectedCategory === tab.id
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeTab === tab.id
                   ? "bg-foreground text-background dark:bg-primary dark:text-primary-foreground shadow-sm scale-105"
                   : "bg-card border border-border/80 text-muted hover:text-foreground hover:border-primary/40"
                   }`}
@@ -432,29 +168,36 @@ export function Projects() {
           </div>
         </div>
 
-        <motion.div
-          layout
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.25 }}
-                onClick={() => setActiveModalProject(project)}
-                className={`group rounded-2xl border bg-card overflow-hidden shadow-sm hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 cursor-pointer flex flex-col justify-between ${project.isIntegration
-                  ? "border-primary/40 ring-1 ring-primary/20"
-                  : "border-border/80"
-                  }`}
-              >
-                <div>
-                  {project.isIntegration && project.integrationPartner ? (
-                    <IntegrationCardBanner partner={project.integrationPartner} />
-                  ) : project.image ? (
+        {/* 1. Full-Stack Systems Subsection */}
+        {showFullStack && (
+          <div className="space-y-6">
+            <div className="flex items-center justify-between border-b border-border/60 pb-3">
+              <div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+                  Core Enterprise Applications
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Full-Stack Systems
+                </h3>
+              </div>
+              <span className="text-xs text-muted font-mono">
+                {fullStackProjects.length} Deployed Platforms
+              </span>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {fullStackProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => setActiveModalProject(project)}
+                  className="group rounded-2xl border border-border/80 bg-card overflow-hidden shadow-sm hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                >
+                  <div>
+                    {/* Project Screenshot Banner */}
                     <div className="relative h-44 w-full overflow-hidden bg-muted/20 border-b border-border/50">
                       <Image
                         src={project.image}
@@ -462,46 +205,138 @@ export function Projects() {
                         fill
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                       <div className="absolute top-3 left-3">
                         <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-background/90 backdrop-blur-md border border-border/80 text-foreground">
-                          {project.category}
+                          {project.systemName}
                         </span>
                       </div>
                     </div>
-                  ) : null}
 
-                  <div className="p-5 space-y-2.5">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
-                        {project.title}
-                      </h3>
-                      <ArrowUpRight className="w-4 h-4 text-muted group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 mt-0.5" />
+                    {/* Content Details */}
+                    <div className="p-5 space-y-2.5">
+                      <div className="flex items-start justify-between gap-2">
+                        <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
+                          {project.title}
+                        </h4>
+                        <ArrowUpRight className="w-4 h-4 text-muted group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 mt-0.5" />
+                      </div>
+
+                      <p className="text-xs text-muted leading-relaxed line-clamp-2 font-light">
+                        {project.tagline}
+                      </p>
                     </div>
-
-                    <p className="text-xs text-muted leading-relaxed line-clamp-2 font-light">
-                      {project.tagline}
-                    </p>
                   </div>
+
+                  {/* Tech Stack Pills */}
+                  <div className="px-5 pb-5 pt-2 flex flex-wrap gap-1.5 border-t border-border/40">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="text-[10px] px-2 py-0.5 rounded-md bg-muted/15 text-muted font-medium"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 2. FinTech & API Integrations Subsection */}
+        {showIntegrations && (
+          <div className="space-y-6 pt-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/60 pb-3">
+              <div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+                  System Interoperability & Enterprise Middleware
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Enterprise API & FinTech Integrations
+                </h3>
+              </div>
+              <span className="text-xs text-muted font-mono">
+                {integratedCompanies.length} Partner Institutions
+              </span>
+            </div>
+
+            {/* General Architecture Master Card */}
+            <div className="p-6 sm:p-8 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card to-card shadow-sm space-y-6">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                  <Network className="w-3.5 h-3.5" />
+                  <span>Architecture & Integration Engine</span>
+                </div>
+                <h4 className="text-lg sm:text-2xl font-bold text-foreground">
+                  High-Throughput Middleware & Payment Integration Engine
+                </h4>
+                <p className="text-sm sm:text-base text-muted font-light leading-relaxed">
+                  I engineer resilient, high-throughput integration middleware and secure REST APIs that bridge Amhara Bank&apos;s core banking infrastructure with prominent governmental, financial, and private enterprise platforms across Ethiopia. Utilizing <span className="text-foreground font-medium">Node.js, Express, and SQL Server</span>, I develop asynchronous integration pipelines that handle real-time customer and institutional invoice inquiries, dynamic bill validations, automated tuition and rental fee collections, mobile wallet checkouts, and national switch clearing feeds. My architectures enforce bank-grade security and transactional integrity through HMAC-SHA256 cryptographic signature verification, real-time webhook listeners, request idempotency nonces to eliminate duplicate debits, and automated end-of-day ledger reconciliation to guarantee zero financial discrepancies.
+                </p>
+              </div>
+
+              {/* Core Technologies & Standards Pill Bar */}
+              <div className="pt-2 border-t border-border/40 flex flex-wrap items-center gap-2">
+                <span className="text-[11px] font-semibold text-muted uppercase tracking-wider">
+                  Core Technologies & Standards:
+                </span>
+                {[
+                  "Node.js",
+                  "Express",
+                  "REST APIs",
+                  "Webhooks",
+                  "Idempotency Keys",
+                  "SQL Server",
+                  "ACID Transactions",
+                  "Automated Ledger Reconciliation",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[11px] px-2.5 py-0.5 rounded-md bg-muted/15 text-foreground/80 font-medium font-mono"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Integrated Partner Companies List */}
+              <div className="pt-4 border-t border-border/40 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h5 className="text-xs font-semibold uppercase tracking-wider text-muted">
+                    Integrated Partner Institutions & Platforms:
+                  </h5>
+                  <span className="text-[11px] font-mono text-muted">
+                    Active Deployments
+                  </span>
                 </div>
 
-                <div className="px-5 pb-5 pt-2 flex flex-wrap gap-1.5 border-t border-border/40">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-[10px] px-2 py-0.5 rounded-md bg-muted/15 text-muted font-medium"
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {integratedCompanies.map((company) => (
+                    <div
+                      key={company.name}
+                      className="p-3.5 rounded-2xl border border-border/70 bg-card/80 hover:border-primary/40 hover:bg-card transition-all space-y-1.5"
                     >
-                      {t}
-                    </span>
+                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 inline-block">
+                        {company.category}
+                      </span>
+                      <h6 className="text-xs sm:text-sm font-bold text-foreground">
+                        {company.name}
+                      </h6>
+                      <p className="text-[11px] text-muted font-light leading-relaxed">
+                        {company.scope}
+                      </p>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+              </div>
+            </div>
+          </div>
+        )}
 
-        {/* Modal Case Study */}
+        {/* Detailed Modal for Full-Stack Projects */}
         <AnimatePresence>
           {activeModalProject && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
@@ -523,7 +358,7 @@ export function Projects() {
                 <div className="flex items-start justify-between gap-4 border-b border-border/60 pb-4">
                   <div>
                     <span className="text-xs font-serif italic text-primary">
-                      {activeModalProject.category} Case Study
+                      {activeModalProject.systemName} Case Study
                     </span>
                     <h3 className="text-xl sm:text-2xl font-bold text-foreground mt-1">
                       {activeModalProject.title}
@@ -540,18 +375,14 @@ export function Projects() {
                   </button>
                 </div>
 
-                {activeModalProject.isIntegration && activeModalProject.integrationPartner ? (
-                  <IntegrationCardBanner partner={activeModalProject.integrationPartner} isModal={true} />
-                ) : activeModalProject.image ? (
-                  <div className="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden bg-muted/20 border border-border/60">
-                    <Image
-                      src={activeModalProject.image}
-                      alt={activeModalProject.title}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                ) : null}
+                <div className="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden bg-muted/20 border border-border/60">
+                  <Image
+                    src={activeModalProject.image}
+                    alt={activeModalProject.title}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
 
                 <div className="space-y-2">
                   <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">
@@ -599,5 +430,3 @@ export function Projects() {
     </SectionWrapper>
   );
 }
-
-

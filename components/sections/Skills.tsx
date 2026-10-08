@@ -63,12 +63,11 @@ const allSkills: SkillItem[] = [
   { name: "Microsoft SQL Server", category: "databases", tag: "RDBMS, Schemas & Stored Procs", icon: Database, color: "#CC292B" },
   { name: "MongoDB", category: "databases", tag: "Document Store & NoSQL", icon: SiMongodb, color: "#47A248" },
   { name: "MySQL", category: "databases", tag: "Relational Database", icon: SiMysql, color: "#4479A1" },
-  { name: "ACID Transactions", category: "databases", tag: "Financial & Data Consistency", icon: Lock, color: "#F59E0B" },
 
   // Linux, DevOps & Reliability
   { name: "Linux OS (Server/Bash)", category: "devops", tag: "Host & Sysadmin", icon: SiLinux, color: "#FCC624" },
   { name: "Docker Containerization", category: "devops", tag: "Containers & Microservices", icon: SiDocker, color: "#2496ED" },
-  { name: "Incident Handling & RCA", category: "devops", tag: "Root Cause Analysis & Triage", icon: SearchCode, color: "#EC4899" },
+  { name: "High-Availability Systems", category: "devops", tag: "Fault Tolerance & SLAs", icon: ShieldCheck, color: "#EC4899" },
   { name: "System & App Monitoring", category: "devops", tag: "Telemetry & Performance", icon: Activity, color: "#10B981" },
   { name: "Architecture & SLA Reviews", category: "devops", tag: "Optimization & High Uptime", icon: CheckCircle2, color: "#6366F1" },
   { name: "Nginx & Reverse Proxies", category: "devops", tag: "Web & Proxy Server", icon: SiNginx, color: "#009639" },
@@ -76,8 +75,8 @@ const allSkills: SkillItem[] = [
   { name: "Postman & Swagger", category: "devops", tag: "API Testing & Docs", icon: SiPostman, color: "#FF6C37" },
 
   // Enterprise ERP & Fintech Integrations
-  { name: "Enterprise ERP Development", category: "enterprise", tag: "HR · Payroll · Inventory · Budget", icon: Server, color: "#6366F1" },
-  { name: "B2B Fintech Integrations", category: "enterprise", tag: "ESL · Airlines · NBE · SantimPay", icon: Workflow, color: "#0EA5E9" },
+  { name: "Enterprise Systems & ERPs", category: "enterprise", tag: "HR · Inventory · Court Accounting", icon: Server, color: "#6366F1" },
+  { name: "FinTech & Payment Gateways", category: "enterprise", tag: "Telebirr · M-Pesa · ESL · Airlines · NBE", icon: Workflow, color: "#0EA5E9" },
   { name: "WSO2 API Manager", category: "enterprise", tag: "Enterprise API Gateway", icon: Network, color: "#FF7300" },
   { name: "WSO2 Micro Integrator", category: "enterprise", tag: "Integration Middleware", icon: Workflow, color: "#F97316" },
   { name: "Roadmap Delivery", category: "enterprise", tag: "Products, Upgrades & PSPs", icon: Smartphone, color: "#00B04F" },
@@ -114,7 +113,7 @@ export function Skills() {
             Technical <span className="font-serif italic font-normal text-primary lowercase">Skills</span>
           </h2>
           <p className="text-sm sm:text-base text-muted max-w-xl mx-auto font-light leading-relaxed">
-            Full-stack programming languages, enterprise ERP architectures, Linux containerized environments, and high-throughput B2B fintech gateways.
+            Full-stack programming languages, enterprise ERP architectures, Linux containerized environments, and high-throughput fintech gateways.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 pt-3">
